@@ -5,7 +5,6 @@
 #import "SOAP11Envelope.h"
 #import "SOAP11Header.h"
 #import "SOAP11Body.h"
-#import "OrderedDictionary.h"
 
 @implementation SOAP11Envelope
 
@@ -24,7 +23,7 @@
 // property meta-data method
 // note: this method is only for internal use, DO NOT CHANGE!
 +(NSMutableDictionary *)getPropertyMetaData {
-    NSMutableDictionary *map = [OrderedDictionary dictionary];
+    NSMutableDictionary *map = [NSMutableDictionary dictionary];
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Header" propertyName:@"header" type:PICO_TYPE_OBJECT clazz:[SOAP11Header class]];

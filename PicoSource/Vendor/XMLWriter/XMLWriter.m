@@ -328,6 +328,8 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 			[self write:prefix];
 			[self write:@":"];
 		}
+        
+        
 	}
 	[self write:localName];
 	

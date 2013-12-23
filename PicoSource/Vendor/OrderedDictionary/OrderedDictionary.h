@@ -1,36 +1,96 @@
+/// /// /// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ///
 //
-//  OrderedDictionary.h
-//  OrderedDictionary
+//	SEQOY™ Development and Consulting
+//	http://www.seqoy.com
 //
-//  Created by Matt Gallagher on 19/12/08.
-//  Copyright 2008 Matt Gallagher. All rights reserved.
+///////////////
 //
-//  This software is provided 'as-is', without any express or implied
-//  warranty. In no event will the authors be held liable for any damages
-//  arising from the use of this software. Permission is granted to anyone to
-//  use this software for any purpose, including commercial applications, and to
-//  alter it and redistribute it freely, subject to the following restrictions:
+//	History:
 //
-//  1. The origin of this software must not be misrepresented; you must not
-//     claim that you wrote the original software. If you use this software
-//     in a product, an acknowledgment in the product documentation would be
-//     appreciated but is not required.
-//  2. Altered source versions must be plainly marked as such, and must not be
-//     misrepresented as being the original software.
-//  3. This notice may not be removed or altered from any source
-//     distribution.
+//	19/12/08 --- Created by Matt Gallagher (http://cocoawithlove.com/)
+//	20/09/09 --- Several changes by Paulo Oliveira
 //
+//	OrderedDictionary.h 
+// 
+/// /// /// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ///
+//
+//  Permission is given to use this source code file without charge in any
+//  project, commercial or otherwise, entirely at your risk, with the condition
+//  that any redistribution (in part or whole) of source code must retain
+//  this copyright and permission notice. Attribution in compiled projects is
+//  appreciated but not required.
+//
+/// /// /// ////// ////// ////// ////// ////// ////// //
+#import <Foundation/Foundation.h> 
 
-#import <Foundation/Foundation.h>
-
-@interface OrderedDictionary : NSMutableDictionary
+@interface OrderedDictionary : NSMutableDictionary <NSCopying>
 {
 	NSMutableDictionary *dictionary;
 	NSMutableArray *array;
 }
 
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark -
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark Init Methods. 
+
+- (id)initWithDictionary:(NSMutableDictionary*)anObject ;
+
+- (id)initWithObject:(NSMutableDictionary*)anObject withArray:(NSMutableArray*)anArray;
+
+/// This method is similar to initWithDictionary, the difference is: This method will Scan the all Dictionary tree converting internal elements too.
+- (id)convertFromDictionary:(id)anObject;
+
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark -
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark Sorting Methods. 
+
+/// Reorder the Dictionary using one giving function.
+- (void)sortUsingFunction:(NSInteger (*)(id, id, void *))comparator context:(void *)context;
+
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark -
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark Insert Methods. 
+
 - (void)insertObject:(id)anObject forKey:(id)aKey atIndex:(NSUInteger)anIndex;
+
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark -
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark Remove Methods. 
+
+- (void)removeLastObject;
+
+- (void)removeObjectAtIndex:(NSUInteger)anIndex;  
+
+- (BOOL)removeObjectFromIndex:(NSUInteger)from To:(NSUInteger)to;	// This method could be slow on large dictionaries.
+
+- (void)removeObjectsInRange:(NSRange)aRange; // This method could be slow on large dictionaries.
+
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark -
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark Retrieve Methods. 
+
+- (id)objectAtIndex:(NSUInteger)anIndex;
+
+- (int)indexOfKey:(id)aKey;
+
 - (id)keyAtIndex:(NSUInteger)anIndex;
+
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark -
+//// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
+#pragma mark Manipulate Methods. 
+
+- (void)swipeIndex:(NSUInteger)from with:(NSUInteger)to; 
+
+- (void)exchangeObjectAtIndex:(NSUInteger)idx1 withObjectAtIndex:(NSUInteger)idx2; 	// This is the same of swipeIndex, this method is just for compatibility.
+
+- (void)moveFromIndex:(NSUInteger)from To:(NSUInteger)to; 
+
 - (NSEnumerator *)reverseKeyEnumerator;
 
 @end

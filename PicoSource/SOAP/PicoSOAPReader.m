@@ -36,20 +36,27 @@
 
 @implementation PicoSOAPReader
 
-static NSString *SOAP11_NS = @"http://schemas.xmlsoap.org/soap/envelope/";
-static NSString *SOAP12_NS = @"http://www.w3.org/2003/05/soap-envelope";
-
 static NSString *INNER_CLASS_KEY = @"innerClass";
 
 // Convert binary data to object of specific class
 -(id)fromData:(NSData *)data withSOAPClass:(Class)soapClazz innerClass:(Class)innerClazz {
     
-    BOOL soap11 = (soapClazz == [SOAP11Envelope class]);
-    BOOL soap12 = (soapClazz == [SOAP12Envelope class]);
-    
-    if (!soap11 && !soap12) {
+    if ((soapClazz != [SOAP11Envelope class]) && (soapClazz != [SOAP12Envelope class])) {
         @throw [NSException exceptionWithName:@"ReaderException" reason:[NSString stringWithFormat:@"can't read non-soap class : %@", NSStringFromClass(soapClazz)] userInfo:nil];
     }
+    
+//******************************************
+#warning my code get SOAP из нестандартного MIME
+    NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    NSRange range = [result rangeOfString:@"<?xml"];
+    NSString *substring = [[result substringFromIndex:range.location] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    range = [substring rangeOfString:@">" options:NSBackwardsSearch];
+    substring = [substring substringToIndex:NSMaxRange(range)];
+    
+    data = [substring dataUsingEncoding:NSUTF8StringEncoding];
+    
+//****************************
     
     NSError *error;
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
@@ -70,14 +77,6 @@ static NSString *INNER_CLASS_KEY = @"innerClass";
         [doc release];
 		@throw [NSException exceptionWithName:@"ReaderException" reason:[NSString stringWithFormat:@"root name mismatch , xml name : %@, root name : %@", xmlName, rootName] userInfo:nil];
 	}
-    
-    // soap version check
-    NSString *soapNs = [rootElement URI];
-    if (soap11 && [soapNs isEqualToString:SOAP12_NS]) {
-        @throw [NSException exceptionWithName:@"ReaderException" reason:@"Expecting SOAP 1.1 response, but got SOAP 1.2 response" userInfo:nil];
-    } else if (soap12 && [soapNs isEqualToString:SOAP11_NS]) {
-        @throw [NSException exceptionWithName:@"ReaderException" reason:@"Expecting SOAP 1.2 response, but got SOAP 1.1 response" userInfo:nil];
-    }
     
     NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
     [threadDictionary setObject:innerClazz forKey:INNER_CLASS_KEY];

@@ -3,7 +3,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SOAP12Header.h"
-#import "OrderedDictionary.h"
 
 @implementation SOAP12Header
 
@@ -20,7 +19,7 @@
 // property meta-data method
 // note: this method is only for internal use, DO NOT CHANGE!
 +(NSMutableDictionary *)getPropertyMetaData {
-    NSMutableDictionary *map = [OrderedDictionary dictionary];
+    NSMutableDictionary *map = [NSMutableDictionary dictionary];
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ANY_ELEMENT xmlName:@"any" propertyName:@"any" type:PICO_TYPE_ANYELEMENT clazz:nil];

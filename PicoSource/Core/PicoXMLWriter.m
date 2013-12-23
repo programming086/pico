@@ -209,6 +209,7 @@
 
 
 -(void)writeElements:(XMLWriter *)xmlWriter source:(id)source schema:(PicoBindingSchema *)bindingSchema namespace:(NSString *)nsURI  {
+#warning неверный порядок property!!!!!, хотя при создании все верно
     NSDictionary *map = bindingSchema.property2ElementSchemaMapping;
     if (map.count > 0) {
         for(NSString *propertyName in map) {

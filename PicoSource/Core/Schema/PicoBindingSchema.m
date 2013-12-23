@@ -39,7 +39,7 @@ static const int CACHE_SIZE = 100;
 		_xml2AttributeSchemaMapping = [[NSMutableDictionary alloc] init];
 		_xml2ElementSchemaMapping = [[NSMutableDictionary alloc] init];
 		_property2ElementSchemaMapping = [[OrderedDictionary alloc] init];
-		_property2AttributeSchemaMapping = [[OrderedDictionary alloc] init];
+		_property2AttributeSchemaMapping = [[NSMutableDictionary alloc] init];
 		
 		_className = [NSStringFromClass(clazz) retain];
 		
@@ -88,6 +88,18 @@ static const int CACHE_SIZE = 100;
 
 -(void)buildMapping:(NSMutableDictionary *)map {
     if (!map) return;
+    
+    
+    
+#warning ЗДЕСЬ МЕНЯЕТСЯ ПОРЯДОК property
+    // пришло
+//    login = <PicoPropertySchema: 0x8b787a0>;
+//    password = <PicoPropertySchema: 0x8b85980>;
+//    email = <PicoPropertySchema: 0x8b71180>;
+//    salt = <PicoPropertySchema: 0x8b85ec0>;
+//    verificationSuccessUrl = <PicoPropertySchema: 0x8b6b570>;
+    
+    // а занесли в _property2ElementSchemaMapping
     
 	for (NSString *propertyName in map) {
 		PicoPropertySchema *ps = [map objectForKey:propertyName];

@@ -98,7 +98,7 @@ enum {
         [userInfo setValue:ex forKey:NSUnderlyingErrorKey];
         NSError *error = [NSError errorWithDomain:PicoErrorDomain code:WriterError userInfo:userInfo];
         if (self.debug) {
-            NSLog(@"Error to build request : \n%@", [error localizedDescription]);
+            NSLog(@"Error to build request : \n%@", error);
         }
         if (failure) {
             failure(nil, error);

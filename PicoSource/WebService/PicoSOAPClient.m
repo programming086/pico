@@ -52,6 +52,7 @@ enum {
     
     [self registerHTTPOperationClass:[PicoSOAPRequestOperation class]];
     [self setDefaultHeader:@"Accept" value:@"text/xml"];
+    
     [self setDefaultHeader:@"Content-Type" value:@"text/xml"];
     
     self.endpointURL = URL;
@@ -98,6 +99,7 @@ enum {
                     if ([picoOperation.responseObj isMemberOfClass:[SOAP11Fault class]] || [picoOperation.responseObj isMemberOfClass:[SOAP12Fault class]]) {
                         failure(picoOperation, nil, picoOperation.responseObj); // soap fault
                     }
+                    failure(picoOperation, nil, picoOperation.responseObj); // soap fault
                 } else {
                     failure(picoOperation, picoOperation.error, nil);
                 }
@@ -122,7 +124,7 @@ enum {
         [userInfo setValue:ex forKey:NSUnderlyingErrorKey];
         NSError *error = [NSError errorWithDomain:PicoErrorDomain code:WriterError userInfo:userInfo];
         if (self.debug) {
-            NSLog(@"Error to build request : \n%@", [error localizedDescription]);
+            NSLog(@"Error to build request : \n%@", error);
         }
         if (failure) {
             failure(nil, error, nil);
@@ -171,9 +173,12 @@ enum {
             SOAP12Header *soap12Header = [[SOAP12Header alloc] init];
             soap12Header.any = self.customSoapHeaders;
             soap12Envelope.header = soap12Header;
+            
             [soap12Header release];
         }
         soapData = [soapWriter toData:soap12Envelope];
+        
+        
         [soap12Body release];
         [soap12Envelope release];
     }
@@ -186,6 +191,8 @@ enum {
         NSLog(@"Request message:");
         NSString *message = [[NSString alloc] initWithData:soapData encoding:CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)self.config.encoding))];
         NSLog(@"%@", message);
+
+        
         [message release];
     }
     

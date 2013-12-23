@@ -76,7 +76,7 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
             self.PicoError = [NSError errorWithDomain:PicoErrorDomain code:ReaderError userInfo:userInfo];
             
             if (self.debug) {
-                NSLog(@"Error to read response message : \n%@", [self.PicoError localizedDescription]);
+                NSLog(@"Error to read response message : \n%@", self.PicoError);
             }
             
         } @finally {
@@ -98,7 +98,7 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
 #pragma mark - AFHTTPRequestOperation
 
 + (NSSet *)acceptableContentTypes {
-    return [NSSet setWithObjects:@"application/soap+xml", @"text/xml", nil];
+    return [NSSet setWithObjects:@"application/soap+xml", @"text/xml", @"multipart/related", nil];
 }
 
 - (void)setCompletionBlockWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
@@ -111,7 +111,7 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
         
         if (self.error) {
             if (self.debug) {
-                NSLog(@"Response HTTP Error:\n%@", [self.error localizedDescription]);
+                NSLog(@"Response HTTP Error:\n%@", self.error);
             }
             if (failure) {
                 dispatch_async(self.failureCallbackQueue ? self.failureCallbackQueue : dispatch_get_main_queue(), ^{

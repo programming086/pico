@@ -7,118 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1D915C16F6CF2300A21D2C /* PicoXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1D915A16F6CF2300A21D2C /* PicoXMLRequestOperation.h */; };
-		CE1D915D16F6CF2300A21D2C /* PicoXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1D915B16F6CF2300A21D2C /* PicoXMLRequestOperation.m */; };
-		CE1D916016F6D29C00A21D2C /* PicoXMLClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1D915E16F6D29C00A21D2C /* PicoXMLClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE1D916116F6D29C00A21D2C /* PicoXMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1D915F16F6D29C00A21D2C /* PicoXMLClient.m */; };
-		CE508E9916F95D85009DFAF4 /* PicoDataConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE508E9716F95D85009DFAF4 /* PicoDataConverter.h */; };
-		CE508E9A16F95D85009DFAF4 /* PicoDataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE508E9816F95D85009DFAF4 /* PicoDataConverter.m */; };
-		CE565ACA16F5A0390097A66B /* PicoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A5716F5A0390097A66B /* PicoCache.h */; };
-		CE565ACB16F5A0390097A66B /* PicoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A5816F5A0390097A66B /* PicoCache.m */; };
-		CE565ACC16F5A0390097A66B /* PicoCacheEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A5916F5A0390097A66B /* PicoCacheEntry.h */; };
-		CE565ACD16F5A0390097A66B /* PicoCacheEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A5A16F5A0390097A66B /* PicoCacheEntry.m */; };
-		CE565ACE16F5A0390097A66B /* PicoBoolConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A5C16F5A0390097A66B /* PicoBoolConverter.h */; };
-		CE565ACF16F5A0390097A66B /* PicoBoolConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A5D16F5A0390097A66B /* PicoBoolConverter.m */; };
-		CE565AD016F5A0390097A66B /* PicoConvertable.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A5E16F5A0390097A66B /* PicoConvertable.h */; };
-		CE565AD116F5A0390097A66B /* PicoConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A5F16F5A0390097A66B /* PicoConverter.h */; };
-		CE565AD216F5A0390097A66B /* PicoConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6016F5A0390097A66B /* PicoConverter.m */; };
-		CE565AD316F5A0390097A66B /* PicoDateConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6116F5A0390097A66B /* PicoDateConverter.h */; };
-		CE565AD416F5A0390097A66B /* PicoDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6216F5A0390097A66B /* PicoDateConverter.m */; };
-		CE565AD516F5A0390097A66B /* PicoNumberConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6316F5A0390097A66B /* PicoNumberConverter.h */; };
-		CE565AD616F5A0390097A66B /* PicoNumberConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6416F5A0390097A66B /* PicoNumberConverter.m */; };
-		CE565AD716F5A0390097A66B /* PicoStringConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6516F5A0390097A66B /* PicoStringConverter.h */; };
-		CE565AD816F5A0390097A66B /* PicoStringConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6616F5A0390097A66B /* PicoStringConverter.m */; };
-		CE565AD916F5A0390097A66B /* PicoBindable.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6716F5A0390097A66B /* PicoBindable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565ADA16F5A0390097A66B /* PicoConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6816F5A0390097A66B /* PicoConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565ADB16F5A0390097A66B /* PicoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6916F5A0390097A66B /* PicoConfig.m */; };
-		CE565ADC16F5A0390097A66B /* PicoConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6A16F5A0390097A66B /* PicoConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565ADD16F5A0390097A66B /* PicoConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6B16F5A0390097A66B /* PicoConstants.m */; };
-		CE565ADE16F5A0390097A66B /* PicoReadable.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6C16F5A0390097A66B /* PicoReadable.h */; };
-		CE565ADF16F5A0390097A66B /* PicoWritable.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6D16F5A0390097A66B /* PicoWritable.h */; };
-		CE565AE016F5A0390097A66B /* PicoXMLReader.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A6E16F5A0390097A66B /* PicoXMLReader.h */; };
-		CE565AE116F5A0390097A66B /* PicoXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A6F16F5A0390097A66B /* PicoXMLReader.m */; };
-		CE565AE216F5A0390097A66B /* PicoXMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7016F5A0390097A66B /* PicoXMLWriter.h */; };
-		CE565AE316F5A0390097A66B /* PicoXMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A7116F5A0390097A66B /* PicoXMLWriter.m */; };
-		CE565AE416F5A0390097A66B /* PicoBindingSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7316F5A0390097A66B /* PicoBindingSchema.h */; };
-		CE565AE516F5A0390097A66B /* PicoBindingSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A7416F5A0390097A66B /* PicoBindingSchema.m */; };
-		CE565AE616F5A0390097A66B /* PicoClassSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7516F5A0390097A66B /* PicoClassSchema.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565AE716F5A0390097A66B /* PicoClassSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A7616F5A0390097A66B /* PicoClassSchema.m */; };
-		CE565AE816F5A0390097A66B /* PicoPropertySchema.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7716F5A0390097A66B /* PicoPropertySchema.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565AE916F5A0390097A66B /* PicoPropertySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A7816F5A0390097A66B /* PicoPropertySchema.m */; };
-		CE565AEA16F5A0390097A66B /* PicoXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7A16F5A0390097A66B /* PicoXMLElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565AEB16F5A0390097A66B /* PicoXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A7B16F5A0390097A66B /* PicoXMLElement.m */; };
-		CE565AEC16F5A0390097A66B /* Pico-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7C16F5A0390097A66B /* Pico-Prefix.pch */; };
-		CE565AED16F5A0390097A66B /* PicoSOAPReader.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A7E16F5A0390097A66B /* PicoSOAPReader.h */; };
-		CE565AEE16F5A0390097A66B /* PicoSOAPReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A7F16F5A0390097A66B /* PicoSOAPReader.m */; };
-		CE565AEF16F5A0390097A66B /* PicoSOAPWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8016F5A0390097A66B /* PicoSOAPWriter.h */; };
-		CE565AF016F5A0390097A66B /* PicoSOAPWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8116F5A0390097A66B /* PicoSOAPWriter.m */; };
-		CE565AF116F5A0390097A66B /* SOAP11Body.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8316F5A0390097A66B /* SOAP11Body.h */; };
-		CE565AF216F5A0390097A66B /* SOAP11Body.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8416F5A0390097A66B /* SOAP11Body.m */; };
-		CE565AF316F5A0390097A66B /* SOAP11Detail.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8516F5A0390097A66B /* SOAP11Detail.h */; };
-		CE565AF416F5A0390097A66B /* SOAP11Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8616F5A0390097A66B /* SOAP11Detail.m */; };
-		CE565AF516F5A0390097A66B /* SOAP11Envelope.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8716F5A0390097A66B /* SOAP11Envelope.h */; };
-		CE565AF616F5A0390097A66B /* SOAP11Envelope.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8816F5A0390097A66B /* SOAP11Envelope.m */; };
-		CE565AF716F5A0390097A66B /* SOAP11Fault.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8916F5A0390097A66B /* SOAP11Fault.h */; };
-		CE565AF816F5A0390097A66B /* SOAP11Fault.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8A16F5A0390097A66B /* SOAP11Fault.m */; };
-		CE565AF916F5A0390097A66B /* SOAP11Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8B16F5A0390097A66B /* SOAP11Header.h */; };
-		CE565AFA16F5A0390097A66B /* SOAP11Header.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8C16F5A0390097A66B /* SOAP11Header.m */; };
-		CE565AFB16F5A0390097A66B /* SOAP12Body.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A8E16F5A0390097A66B /* SOAP12Body.h */; };
-		CE565AFC16F5A0390097A66B /* SOAP12Body.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A8F16F5A0390097A66B /* SOAP12Body.m */; };
-		CE565AFD16F5A0390097A66B /* SOAP12Detail.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9016F5A0390097A66B /* SOAP12Detail.h */; };
-		CE565AFE16F5A0390097A66B /* SOAP12Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9116F5A0390097A66B /* SOAP12Detail.m */; };
-		CE565AFF16F5A0390097A66B /* SOAP12Envelope.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9216F5A0390097A66B /* SOAP12Envelope.h */; };
-		CE565B0016F5A0390097A66B /* SOAP12Envelope.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9316F5A0390097A66B /* SOAP12Envelope.m */; };
-		CE565B0116F5A0390097A66B /* SOAP12Fault.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9416F5A0390097A66B /* SOAP12Fault.h */; };
-		CE565B0216F5A0390097A66B /* SOAP12Fault.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9516F5A0390097A66B /* SOAP12Fault.m */; };
-		CE565B0316F5A0390097A66B /* SOAP12Faultcode.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9616F5A0390097A66B /* SOAP12Faultcode.h */; };
-		CE565B0416F5A0390097A66B /* SOAP12Faultcode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9716F5A0390097A66B /* SOAP12Faultcode.m */; };
-		CE565B0516F5A0390097A66B /* SOAP12FaultcodeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9816F5A0390097A66B /* SOAP12FaultcodeEnum.h */; };
-		CE565B0616F5A0390097A66B /* SOAP12FaultcodeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9916F5A0390097A66B /* SOAP12FaultcodeEnum.m */; };
-		CE565B0716F5A0390097A66B /* SOAP12Faultreason.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9A16F5A0390097A66B /* SOAP12Faultreason.h */; };
-		CE565B0816F5A0390097A66B /* SOAP12Faultreason.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9B16F5A0390097A66B /* SOAP12Faultreason.m */; };
-		CE565B0916F5A0390097A66B /* SOAP12Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9C16F5A0390097A66B /* SOAP12Header.h */; };
-		CE565B0A16F5A0390097A66B /* SOAP12Header.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9D16F5A0390097A66B /* SOAP12Header.m */; };
-		CE565B0B16F5A0390097A66B /* SOAP12NotUnderstoodType.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565A9E16F5A0390097A66B /* SOAP12NotUnderstoodType.h */; };
-		CE565B0C16F5A0390097A66B /* SOAP12NotUnderstoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565A9F16F5A0390097A66B /* SOAP12NotUnderstoodType.m */; };
-		CE565B0D16F5A0390097A66B /* SOAP12Reasontext.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AA016F5A0390097A66B /* SOAP12Reasontext.h */; };
-		CE565B0E16F5A0390097A66B /* SOAP12Reasontext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AA116F5A0390097A66B /* SOAP12Reasontext.m */; };
-		CE565B0F16F5A0390097A66B /* SOAP12Subcode.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AA216F5A0390097A66B /* SOAP12Subcode.h */; };
-		CE565B1016F5A0390097A66B /* SOAP12Subcode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AA316F5A0390097A66B /* SOAP12Subcode.m */; };
-		CE565B1116F5A0390097A66B /* SOAP12SupportedEnvType.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AA416F5A0390097A66B /* SOAP12SupportedEnvType.h */; };
-		CE565B1216F5A0390097A66B /* SOAP12SupportedEnvType.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AA516F5A0390097A66B /* SOAP12SupportedEnvType.m */; };
-		CE565B1316F5A0390097A66B /* SOAP12UpgradeType.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AA616F5A0390097A66B /* SOAP12UpgradeType.h */; };
-		CE565B1416F5A0390097A66B /* SOAP12UpgradeType.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AA716F5A0390097A66B /* SOAP12UpgradeType.m */; };
-		CE565B1516F5A0390097A66B /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AAA16F5A0390097A66B /* AFHTTPClient.h */; };
-		CE565B1616F5A0390097A66B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AAB16F5A0390097A66B /* AFHTTPClient.m */; };
-		CE565B1716F5A0390097A66B /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AAC16F5A0390097A66B /* AFHTTPRequestOperation.h */; };
-		CE565B1816F5A0390097A66B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AAD16F5A0390097A66B /* AFHTTPRequestOperation.m */; };
-		CE565B1916F5A0390097A66B /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AAE16F5A0390097A66B /* AFImageRequestOperation.h */; };
-		CE565B1A16F5A0390097A66B /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AAF16F5A0390097A66B /* AFImageRequestOperation.m */; };
-		CE565B1B16F5A0390097A66B /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AB016F5A0390097A66B /* AFJSONRequestOperation.h */; };
-		CE565B1C16F5A0390097A66B /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AB116F5A0390097A66B /* AFJSONRequestOperation.m */; };
-		CE565B1D16F5A0390097A66B /* AFJSONUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AB216F5A0390097A66B /* AFJSONUtilities.h */; };
-		CE565B1E16F5A0390097A66B /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AB316F5A0390097A66B /* AFJSONUtilities.m */; };
-		CE565B1F16F5A0390097A66B /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AB416F5A0390097A66B /* AFNetworkActivityIndicatorManager.h */; };
-		CE565B2016F5A0390097A66B /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AB516F5A0390097A66B /* AFNetworkActivityIndicatorManager.m */; };
-		CE565B2116F5A0390097A66B /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AB616F5A0390097A66B /* AFNetworking.h */; };
-		CE565B2216F5A0390097A66B /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AB716F5A0390097A66B /* AFPropertyListRequestOperation.h */; };
-		CE565B2316F5A0390097A66B /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AB816F5A0390097A66B /* AFPropertyListRequestOperation.m */; };
-		CE565B2416F5A0390097A66B /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AB916F5A0390097A66B /* AFURLConnectionOperation.h */; };
-		CE565B2516F5A0390097A66B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565ABA16F5A0390097A66B /* AFURLConnectionOperation.m */; };
-		CE565B2616F5A0390097A66B /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565ABB16F5A0390097A66B /* AFXMLRequestOperation.h */; };
-		CE565B2716F5A0390097A66B /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565ABC16F5A0390097A66B /* AFXMLRequestOperation.m */; };
-		CE565B2816F5A0390097A66B /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565ABD16F5A0390097A66B /* UIImageView+AFNetworking.h */; };
-		CE565B2916F5A0390097A66B /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565ABE16F5A0390097A66B /* UIImageView+AFNetworking.m */; };
-		CE565B2A16F5A0390097A66B /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AC016F5A0390097A66B /* GDataXMLNode.h */; };
-		CE565B2B16F5A0390097A66B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AC116F5A0390097A66B /* GDataXMLNode.m */; };
-		CE565B2C16F5A0390097A66B /* XMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AC316F5A0390097A66B /* XMLWriter.h */; };
-		CE565B2D16F5A0390097A66B /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AC416F5A0390097A66B /* XMLWriter.m */; };
-		CE565B2E16F5A0390097A66B /* PicoSOAPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AC616F5A0390097A66B /* PicoSOAPRequestOperation.h */; };
-		CE565B2F16F5A0390097A66B /* PicoSOAPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AC716F5A0390097A66B /* PicoSOAPRequestOperation.m */; };
-		CE565B3016F5A0390097A66B /* PicoSOAPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CE565AC816F5A0390097A66B /* PicoSOAPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE565B3116F5A0390097A66B /* PicoSOAPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE565AC916F5A0390097A66B /* PicoSOAPClient.m */; };
-		CE6883691772F7C00035337B /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6883671772F7C00035337B /* OrderedDictionary.h */; };
-		CE68836A1772F7C00035337B /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6883681772F7C00035337B /* OrderedDictionary.m */; };
+		2101C1081868769700A27E46 /* PicoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C08C1868769700A27E46 /* PicoCache.h */; };
+		2101C1091868769700A27E46 /* PicoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C08D1868769700A27E46 /* PicoCache.m */; };
+		2101C10A1868769700A27E46 /* PicoCacheEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C08E1868769700A27E46 /* PicoCacheEntry.h */; };
+		2101C10B1868769700A27E46 /* PicoCacheEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C08F1868769700A27E46 /* PicoCacheEntry.m */; };
+		2101C10C1868769700A27E46 /* PicoBoolConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0911868769700A27E46 /* PicoBoolConverter.h */; };
+		2101C10D1868769700A27E46 /* PicoBoolConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0921868769700A27E46 /* PicoBoolConverter.m */; };
+		2101C10E1868769700A27E46 /* PicoConvertable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0931868769700A27E46 /* PicoConvertable.h */; };
+		2101C10F1868769700A27E46 /* PicoConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0941868769700A27E46 /* PicoConverter.h */; };
+		2101C1101868769700A27E46 /* PicoConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0951868769700A27E46 /* PicoConverter.m */; };
+		2101C1111868769700A27E46 /* PicoDataConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0961868769700A27E46 /* PicoDataConverter.h */; };
+		2101C1121868769700A27E46 /* PicoDataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0971868769700A27E46 /* PicoDataConverter.m */; };
+		2101C1131868769700A27E46 /* PicoDateConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0981868769700A27E46 /* PicoDateConverter.h */; };
+		2101C1141868769700A27E46 /* PicoDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0991868769700A27E46 /* PicoDateConverter.m */; };
+		2101C1151868769700A27E46 /* PicoNumberConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C09A1868769700A27E46 /* PicoNumberConverter.h */; };
+		2101C1161868769700A27E46 /* PicoNumberConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C09B1868769700A27E46 /* PicoNumberConverter.m */; };
+		2101C1171868769700A27E46 /* PicoStringConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C09C1868769700A27E46 /* PicoStringConverter.h */; };
+		2101C1181868769700A27E46 /* PicoStringConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C09D1868769700A27E46 /* PicoStringConverter.m */; };
+		2101C1191868769700A27E46 /* PicoBindable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C09E1868769700A27E46 /* PicoBindable.h */; };
+		2101C11A1868769700A27E46 /* PicoConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C09F1868769700A27E46 /* PicoConfig.h */; };
+		2101C11B1868769700A27E46 /* PicoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0A01868769700A27E46 /* PicoConfig.m */; };
+		2101C11C1868769700A27E46 /* PicoConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0A11868769700A27E46 /* PicoConstants.h */; };
+		2101C11D1868769700A27E46 /* PicoConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0A21868769700A27E46 /* PicoConstants.m */; };
+		2101C11E1868769700A27E46 /* PicoReadable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0A31868769700A27E46 /* PicoReadable.h */; };
+		2101C11F1868769700A27E46 /* PicoWritable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0A41868769700A27E46 /* PicoWritable.h */; };
+		2101C1201868769700A27E46 /* PicoXMLReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0A51868769700A27E46 /* PicoXMLReader.h */; };
+		2101C1211868769700A27E46 /* PicoXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0A61868769700A27E46 /* PicoXMLReader.m */; };
+		2101C1221868769700A27E46 /* PicoXMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0A71868769700A27E46 /* PicoXMLWriter.h */; };
+		2101C1231868769700A27E46 /* PicoXMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0A81868769700A27E46 /* PicoXMLWriter.m */; };
+		2101C1241868769700A27E46 /* PicoBindingSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0AA1868769700A27E46 /* PicoBindingSchema.h */; };
+		2101C1251868769700A27E46 /* PicoBindingSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0AB1868769700A27E46 /* PicoBindingSchema.m */; };
+		2101C1261868769700A27E46 /* PicoClassSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0AC1868769700A27E46 /* PicoClassSchema.h */; };
+		2101C1271868769700A27E46 /* PicoClassSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0AD1868769700A27E46 /* PicoClassSchema.m */; };
+		2101C1281868769700A27E46 /* PicoPropertySchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0AE1868769700A27E46 /* PicoPropertySchema.h */; };
+		2101C1291868769700A27E46 /* PicoPropertySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0AF1868769700A27E46 /* PicoPropertySchema.m */; };
+		2101C12A1868769700A27E46 /* PicoXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0B11868769700A27E46 /* PicoXMLElement.h */; };
+		2101C12B1868769700A27E46 /* PicoXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0B21868769700A27E46 /* PicoXMLElement.m */; };
+		2101C12C1868769700A27E46 /* pico-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0B31868769700A27E46 /* pico-Prefix.pch */; };
+		2101C12D1868769700A27E46 /* PicoSOAPReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0B51868769700A27E46 /* PicoSOAPReader.h */; };
+		2101C12E1868769700A27E46 /* PicoSOAPReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0B61868769700A27E46 /* PicoSOAPReader.m */; };
+		2101C12F1868769700A27E46 /* PicoSOAPWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0B71868769700A27E46 /* PicoSOAPWriter.h */; };
+		2101C1301868769700A27E46 /* PicoSOAPWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0B81868769700A27E46 /* PicoSOAPWriter.m */; };
+		2101C1311868769700A27E46 /* SOAP11Body.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0BA1868769700A27E46 /* SOAP11Body.h */; };
+		2101C1321868769700A27E46 /* SOAP11Body.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0BB1868769700A27E46 /* SOAP11Body.m */; };
+		2101C1331868769700A27E46 /* SOAP11Detail.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0BC1868769700A27E46 /* SOAP11Detail.h */; };
+		2101C1341868769700A27E46 /* SOAP11Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0BD1868769700A27E46 /* SOAP11Detail.m */; };
+		2101C1351868769700A27E46 /* SOAP11Envelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0BE1868769700A27E46 /* SOAP11Envelope.h */; };
+		2101C1361868769700A27E46 /* SOAP11Envelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0BF1868769700A27E46 /* SOAP11Envelope.m */; };
+		2101C1371868769700A27E46 /* SOAP11Fault.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0C01868769700A27E46 /* SOAP11Fault.h */; };
+		2101C1381868769700A27E46 /* SOAP11Fault.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0C11868769700A27E46 /* SOAP11Fault.m */; };
+		2101C1391868769700A27E46 /* SOAP11Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0C21868769700A27E46 /* SOAP11Header.h */; };
+		2101C13A1868769700A27E46 /* SOAP11Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0C31868769700A27E46 /* SOAP11Header.m */; };
+		2101C13B1868769700A27E46 /* SOAP12Body.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0C51868769700A27E46 /* SOAP12Body.h */; };
+		2101C13C1868769700A27E46 /* SOAP12Body.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0C61868769700A27E46 /* SOAP12Body.m */; };
+		2101C13D1868769700A27E46 /* SOAP12Detail.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0C71868769700A27E46 /* SOAP12Detail.h */; };
+		2101C13E1868769700A27E46 /* SOAP12Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0C81868769700A27E46 /* SOAP12Detail.m */; };
+		2101C13F1868769700A27E46 /* SOAP12Envelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0C91868769700A27E46 /* SOAP12Envelope.h */; };
+		2101C1401868769700A27E46 /* SOAP12Envelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0CA1868769700A27E46 /* SOAP12Envelope.m */; };
+		2101C1411868769700A27E46 /* SOAP12Fault.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0CB1868769700A27E46 /* SOAP12Fault.h */; };
+		2101C1421868769700A27E46 /* SOAP12Fault.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0CC1868769700A27E46 /* SOAP12Fault.m */; };
+		2101C1431868769700A27E46 /* SOAP12Faultcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0CD1868769700A27E46 /* SOAP12Faultcode.h */; };
+		2101C1441868769700A27E46 /* SOAP12Faultcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0CE1868769700A27E46 /* SOAP12Faultcode.m */; };
+		2101C1451868769700A27E46 /* SOAP12FaultcodeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0CF1868769700A27E46 /* SOAP12FaultcodeEnum.h */; };
+		2101C1461868769700A27E46 /* SOAP12FaultcodeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0D01868769700A27E46 /* SOAP12FaultcodeEnum.m */; };
+		2101C1471868769700A27E46 /* SOAP12Faultreason.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0D11868769700A27E46 /* SOAP12Faultreason.h */; };
+		2101C1481868769700A27E46 /* SOAP12Faultreason.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0D21868769700A27E46 /* SOAP12Faultreason.m */; };
+		2101C1491868769700A27E46 /* SOAP12Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0D31868769700A27E46 /* SOAP12Header.h */; };
+		2101C14A1868769700A27E46 /* SOAP12Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0D41868769700A27E46 /* SOAP12Header.m */; };
+		2101C14B1868769700A27E46 /* SOAP12NotUnderstoodType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0D51868769700A27E46 /* SOAP12NotUnderstoodType.h */; };
+		2101C14C1868769700A27E46 /* SOAP12NotUnderstoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0D61868769700A27E46 /* SOAP12NotUnderstoodType.m */; };
+		2101C14D1868769700A27E46 /* SOAP12Reasontext.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0D71868769700A27E46 /* SOAP12Reasontext.h */; };
+		2101C14E1868769700A27E46 /* SOAP12Reasontext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0D81868769700A27E46 /* SOAP12Reasontext.m */; };
+		2101C14F1868769700A27E46 /* SOAP12Subcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0D91868769700A27E46 /* SOAP12Subcode.h */; };
+		2101C1501868769700A27E46 /* SOAP12Subcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0DA1868769700A27E46 /* SOAP12Subcode.m */; };
+		2101C1511868769700A27E46 /* SOAP12SupportedEnvType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0DB1868769700A27E46 /* SOAP12SupportedEnvType.h */; };
+		2101C1521868769700A27E46 /* SOAP12SupportedEnvType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0DC1868769700A27E46 /* SOAP12SupportedEnvType.m */; };
+		2101C1531868769700A27E46 /* SOAP12UpgradeType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0DD1868769700A27E46 /* SOAP12UpgradeType.h */; };
+		2101C1541868769700A27E46 /* SOAP12UpgradeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0DE1868769700A27E46 /* SOAP12UpgradeType.m */; };
+		2101C1551868769700A27E46 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0E11868769700A27E46 /* AFHTTPClient.h */; };
+		2101C1561868769700A27E46 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0E21868769700A27E46 /* AFHTTPClient.m */; };
+		2101C1571868769700A27E46 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0E31868769700A27E46 /* AFHTTPRequestOperation.h */; };
+		2101C1581868769700A27E46 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0E41868769700A27E46 /* AFHTTPRequestOperation.m */; };
+		2101C1591868769700A27E46 /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0E51868769700A27E46 /* AFImageRequestOperation.h */; };
+		2101C15A1868769700A27E46 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0E61868769700A27E46 /* AFImageRequestOperation.m */; };
+		2101C15B1868769700A27E46 /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0E71868769700A27E46 /* AFJSONRequestOperation.h */; };
+		2101C15C1868769700A27E46 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0E81868769700A27E46 /* AFJSONRequestOperation.m */; };
+		2101C15D1868769700A27E46 /* AFJSONUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0E91868769700A27E46 /* AFJSONUtilities.h */; };
+		2101C15E1868769700A27E46 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0EA1868769700A27E46 /* AFJSONUtilities.m */; };
+		2101C15F1868769700A27E46 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0EB1868769700A27E46 /* AFNetworkActivityIndicatorManager.h */; };
+		2101C1601868769700A27E46 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0EC1868769700A27E46 /* AFNetworkActivityIndicatorManager.m */; };
+		2101C1611868769700A27E46 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0ED1868769700A27E46 /* AFNetworking.h */; };
+		2101C1621868769700A27E46 /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0EE1868769700A27E46 /* AFPropertyListRequestOperation.h */; };
+		2101C1631868769700A27E46 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0EF1868769700A27E46 /* AFPropertyListRequestOperation.m */; };
+		2101C1641868769700A27E46 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0F01868769700A27E46 /* AFURLConnectionOperation.h */; };
+		2101C1651868769700A27E46 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0F11868769700A27E46 /* AFURLConnectionOperation.m */; };
+		2101C1661868769700A27E46 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0F21868769700A27E46 /* AFXMLRequestOperation.h */; };
+		2101C1671868769700A27E46 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0F31868769700A27E46 /* AFXMLRequestOperation.m */; };
+		2101C1681868769700A27E46 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0F41868769700A27E46 /* UIImageView+AFNetworking.h */; };
+		2101C1691868769700A27E46 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0F51868769700A27E46 /* UIImageView+AFNetworking.m */; };
+		2101C16A1868769700A27E46 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0F71868769700A27E46 /* GDataXMLNode.h */; };
+		2101C16B1868769700A27E46 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0F81868769700A27E46 /* GDataXMLNode.m */; };
+		2101C16C1868769700A27E46 /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0FA1868769700A27E46 /* OrderedDictionary.h */; };
+		2101C16D1868769700A27E46 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0FB1868769700A27E46 /* OrderedDictionary.m */; };
+		2101C16E1868769700A27E46 /* XMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C0FD1868769700A27E46 /* XMLWriter.h */; };
+		2101C16F1868769700A27E46 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C0FE1868769700A27E46 /* XMLWriter.m */; };
+		2101C1701868769700A27E46 /* PicoSOAPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C1001868769700A27E46 /* PicoSOAPClient.h */; };
+		2101C1711868769700A27E46 /* PicoSOAPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C1011868769700A27E46 /* PicoSOAPClient.m */; };
+		2101C1721868769700A27E46 /* PicoSOAPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C1021868769700A27E46 /* PicoSOAPRequestOperation.h */; };
+		2101C1731868769700A27E46 /* PicoSOAPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C1031868769700A27E46 /* PicoSOAPRequestOperation.m */; };
+		2101C1741868769700A27E46 /* PicoXMLClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C1041868769700A27E46 /* PicoXMLClient.h */; };
+		2101C1751868769700A27E46 /* PicoXMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C1051868769700A27E46 /* PicoXMLClient.m */; };
+		2101C1761868769700A27E46 /* PicoXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2101C1061868769700A27E46 /* PicoXMLRequestOperation.h */; };
+		2101C1771868769700A27E46 /* PicoXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101C1071868769700A27E46 /* PicoXMLRequestOperation.m */; };
 		CEAA8F1916D9C70E0024B5D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAA8F1816D9C70E0024B5D7 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,118 +136,118 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE1D915A16F6CF2300A21D2C /* PicoXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLRequestOperation.h; sourceTree = "<group>"; };
-		CE1D915B16F6CF2300A21D2C /* PicoXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLRequestOperation.m; sourceTree = "<group>"; };
-		CE1D915E16F6D29C00A21D2C /* PicoXMLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLClient.h; sourceTree = "<group>"; };
-		CE1D915F16F6D29C00A21D2C /* PicoXMLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLClient.m; sourceTree = "<group>"; };
-		CE508E9716F95D85009DFAF4 /* PicoDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoDataConverter.h; sourceTree = "<group>"; };
-		CE508E9816F95D85009DFAF4 /* PicoDataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoDataConverter.m; sourceTree = "<group>"; };
-		CE565A5716F5A0390097A66B /* PicoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoCache.h; sourceTree = "<group>"; };
-		CE565A5816F5A0390097A66B /* PicoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoCache.m; sourceTree = "<group>"; };
-		CE565A5916F5A0390097A66B /* PicoCacheEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoCacheEntry.h; sourceTree = "<group>"; };
-		CE565A5A16F5A0390097A66B /* PicoCacheEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoCacheEntry.m; sourceTree = "<group>"; };
-		CE565A5C16F5A0390097A66B /* PicoBoolConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoBoolConverter.h; sourceTree = "<group>"; };
-		CE565A5D16F5A0390097A66B /* PicoBoolConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoBoolConverter.m; sourceTree = "<group>"; };
-		CE565A5E16F5A0390097A66B /* PicoConvertable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConvertable.h; sourceTree = "<group>"; };
-		CE565A5F16F5A0390097A66B /* PicoConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConverter.h; sourceTree = "<group>"; };
-		CE565A6016F5A0390097A66B /* PicoConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoConverter.m; sourceTree = "<group>"; };
-		CE565A6116F5A0390097A66B /* PicoDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoDateConverter.h; sourceTree = "<group>"; };
-		CE565A6216F5A0390097A66B /* PicoDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoDateConverter.m; sourceTree = "<group>"; };
-		CE565A6316F5A0390097A66B /* PicoNumberConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoNumberConverter.h; sourceTree = "<group>"; };
-		CE565A6416F5A0390097A66B /* PicoNumberConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoNumberConverter.m; sourceTree = "<group>"; };
-		CE565A6516F5A0390097A66B /* PicoStringConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoStringConverter.h; sourceTree = "<group>"; };
-		CE565A6616F5A0390097A66B /* PicoStringConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoStringConverter.m; sourceTree = "<group>"; };
-		CE565A6716F5A0390097A66B /* PicoBindable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoBindable.h; sourceTree = "<group>"; };
-		CE565A6816F5A0390097A66B /* PicoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConfig.h; sourceTree = "<group>"; };
-		CE565A6916F5A0390097A66B /* PicoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoConfig.m; sourceTree = "<group>"; };
-		CE565A6A16F5A0390097A66B /* PicoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConstants.h; sourceTree = "<group>"; };
-		CE565A6B16F5A0390097A66B /* PicoConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoConstants.m; sourceTree = "<group>"; };
-		CE565A6C16F5A0390097A66B /* PicoReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoReadable.h; sourceTree = "<group>"; };
-		CE565A6D16F5A0390097A66B /* PicoWritable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoWritable.h; sourceTree = "<group>"; };
-		CE565A6E16F5A0390097A66B /* PicoXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLReader.h; sourceTree = "<group>"; };
-		CE565A6F16F5A0390097A66B /* PicoXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLReader.m; sourceTree = "<group>"; };
-		CE565A7016F5A0390097A66B /* PicoXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLWriter.h; sourceTree = "<group>"; };
-		CE565A7116F5A0390097A66B /* PicoXMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLWriter.m; sourceTree = "<group>"; };
-		CE565A7316F5A0390097A66B /* PicoBindingSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoBindingSchema.h; sourceTree = "<group>"; };
-		CE565A7416F5A0390097A66B /* PicoBindingSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoBindingSchema.m; sourceTree = "<group>"; };
-		CE565A7516F5A0390097A66B /* PicoClassSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoClassSchema.h; sourceTree = "<group>"; };
-		CE565A7616F5A0390097A66B /* PicoClassSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoClassSchema.m; sourceTree = "<group>"; };
-		CE565A7716F5A0390097A66B /* PicoPropertySchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoPropertySchema.h; sourceTree = "<group>"; };
-		CE565A7816F5A0390097A66B /* PicoPropertySchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoPropertySchema.m; sourceTree = "<group>"; };
-		CE565A7A16F5A0390097A66B /* PicoXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLElement.h; sourceTree = "<group>"; };
-		CE565A7B16F5A0390097A66B /* PicoXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLElement.m; sourceTree = "<group>"; };
-		CE565A7C16F5A0390097A66B /* Pico-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pico-Prefix.pch"; sourceTree = "<group>"; };
-		CE565A7E16F5A0390097A66B /* PicoSOAPReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPReader.h; sourceTree = "<group>"; };
-		CE565A7F16F5A0390097A66B /* PicoSOAPReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPReader.m; sourceTree = "<group>"; };
-		CE565A8016F5A0390097A66B /* PicoSOAPWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPWriter.h; sourceTree = "<group>"; };
-		CE565A8116F5A0390097A66B /* PicoSOAPWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPWriter.m; sourceTree = "<group>"; };
-		CE565A8316F5A0390097A66B /* SOAP11Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Body.h; sourceTree = "<group>"; };
-		CE565A8416F5A0390097A66B /* SOAP11Body.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Body.m; sourceTree = "<group>"; };
-		CE565A8516F5A0390097A66B /* SOAP11Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Detail.h; sourceTree = "<group>"; };
-		CE565A8616F5A0390097A66B /* SOAP11Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Detail.m; sourceTree = "<group>"; };
-		CE565A8716F5A0390097A66B /* SOAP11Envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Envelope.h; sourceTree = "<group>"; };
-		CE565A8816F5A0390097A66B /* SOAP11Envelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Envelope.m; sourceTree = "<group>"; };
-		CE565A8916F5A0390097A66B /* SOAP11Fault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Fault.h; sourceTree = "<group>"; };
-		CE565A8A16F5A0390097A66B /* SOAP11Fault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Fault.m; sourceTree = "<group>"; };
-		CE565A8B16F5A0390097A66B /* SOAP11Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Header.h; sourceTree = "<group>"; };
-		CE565A8C16F5A0390097A66B /* SOAP11Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Header.m; sourceTree = "<group>"; };
-		CE565A8E16F5A0390097A66B /* SOAP12Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Body.h; sourceTree = "<group>"; };
-		CE565A8F16F5A0390097A66B /* SOAP12Body.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Body.m; sourceTree = "<group>"; };
-		CE565A9016F5A0390097A66B /* SOAP12Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Detail.h; sourceTree = "<group>"; };
-		CE565A9116F5A0390097A66B /* SOAP12Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Detail.m; sourceTree = "<group>"; };
-		CE565A9216F5A0390097A66B /* SOAP12Envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Envelope.h; sourceTree = "<group>"; };
-		CE565A9316F5A0390097A66B /* SOAP12Envelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Envelope.m; sourceTree = "<group>"; };
-		CE565A9416F5A0390097A66B /* SOAP12Fault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Fault.h; sourceTree = "<group>"; };
-		CE565A9516F5A0390097A66B /* SOAP12Fault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Fault.m; sourceTree = "<group>"; };
-		CE565A9616F5A0390097A66B /* SOAP12Faultcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Faultcode.h; sourceTree = "<group>"; };
-		CE565A9716F5A0390097A66B /* SOAP12Faultcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Faultcode.m; sourceTree = "<group>"; };
-		CE565A9816F5A0390097A66B /* SOAP12FaultcodeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12FaultcodeEnum.h; sourceTree = "<group>"; };
-		CE565A9916F5A0390097A66B /* SOAP12FaultcodeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12FaultcodeEnum.m; sourceTree = "<group>"; };
-		CE565A9A16F5A0390097A66B /* SOAP12Faultreason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Faultreason.h; sourceTree = "<group>"; };
-		CE565A9B16F5A0390097A66B /* SOAP12Faultreason.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Faultreason.m; sourceTree = "<group>"; };
-		CE565A9C16F5A0390097A66B /* SOAP12Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Header.h; sourceTree = "<group>"; };
-		CE565A9D16F5A0390097A66B /* SOAP12Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Header.m; sourceTree = "<group>"; };
-		CE565A9E16F5A0390097A66B /* SOAP12NotUnderstoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12NotUnderstoodType.h; sourceTree = "<group>"; };
-		CE565A9F16F5A0390097A66B /* SOAP12NotUnderstoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12NotUnderstoodType.m; sourceTree = "<group>"; };
-		CE565AA016F5A0390097A66B /* SOAP12Reasontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Reasontext.h; sourceTree = "<group>"; };
-		CE565AA116F5A0390097A66B /* SOAP12Reasontext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Reasontext.m; sourceTree = "<group>"; };
-		CE565AA216F5A0390097A66B /* SOAP12Subcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Subcode.h; sourceTree = "<group>"; };
-		CE565AA316F5A0390097A66B /* SOAP12Subcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Subcode.m; sourceTree = "<group>"; };
-		CE565AA416F5A0390097A66B /* SOAP12SupportedEnvType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12SupportedEnvType.h; sourceTree = "<group>"; };
-		CE565AA516F5A0390097A66B /* SOAP12SupportedEnvType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12SupportedEnvType.m; sourceTree = "<group>"; };
-		CE565AA616F5A0390097A66B /* SOAP12UpgradeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12UpgradeType.h; sourceTree = "<group>"; };
-		CE565AA716F5A0390097A66B /* SOAP12UpgradeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12UpgradeType.m; sourceTree = "<group>"; };
-		CE565AAA16F5A0390097A66B /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
-		CE565AAB16F5A0390097A66B /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
-		CE565AAC16F5A0390097A66B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		CE565AAD16F5A0390097A66B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		CE565AAE16F5A0390097A66B /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
-		CE565AAF16F5A0390097A66B /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
-		CE565AB016F5A0390097A66B /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		CE565AB116F5A0390097A66B /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
-		CE565AB216F5A0390097A66B /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
-		CE565AB316F5A0390097A66B /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
-		CE565AB416F5A0390097A66B /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		CE565AB516F5A0390097A66B /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		CE565AB616F5A0390097A66B /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		CE565AB716F5A0390097A66B /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		CE565AB816F5A0390097A66B /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
-		CE565AB916F5A0390097A66B /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		CE565ABA16F5A0390097A66B /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		CE565ABB16F5A0390097A66B /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
-		CE565ABC16F5A0390097A66B /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
-		CE565ABD16F5A0390097A66B /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		CE565ABE16F5A0390097A66B /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		CE565AC016F5A0390097A66B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		CE565AC116F5A0390097A66B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		CE565AC316F5A0390097A66B /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
-		CE565AC416F5A0390097A66B /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
-		CE565AC616F5A0390097A66B /* PicoSOAPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPRequestOperation.h; sourceTree = "<group>"; };
-		CE565AC716F5A0390097A66B /* PicoSOAPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPRequestOperation.m; sourceTree = "<group>"; };
-		CE565AC816F5A0390097A66B /* PicoSOAPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPClient.h; sourceTree = "<group>"; };
-		CE565AC916F5A0390097A66B /* PicoSOAPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPClient.m; sourceTree = "<group>"; };
-		CE6883671772F7C00035337B /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
-		CE6883681772F7C00035337B /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
+		2101C08C1868769700A27E46 /* PicoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoCache.h; sourceTree = "<group>"; };
+		2101C08D1868769700A27E46 /* PicoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoCache.m; sourceTree = "<group>"; };
+		2101C08E1868769700A27E46 /* PicoCacheEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoCacheEntry.h; sourceTree = "<group>"; };
+		2101C08F1868769700A27E46 /* PicoCacheEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoCacheEntry.m; sourceTree = "<group>"; };
+		2101C0911868769700A27E46 /* PicoBoolConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoBoolConverter.h; sourceTree = "<group>"; };
+		2101C0921868769700A27E46 /* PicoBoolConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoBoolConverter.m; sourceTree = "<group>"; };
+		2101C0931868769700A27E46 /* PicoConvertable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConvertable.h; sourceTree = "<group>"; };
+		2101C0941868769700A27E46 /* PicoConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConverter.h; sourceTree = "<group>"; };
+		2101C0951868769700A27E46 /* PicoConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoConverter.m; sourceTree = "<group>"; };
+		2101C0961868769700A27E46 /* PicoDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoDataConverter.h; sourceTree = "<group>"; };
+		2101C0971868769700A27E46 /* PicoDataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoDataConverter.m; sourceTree = "<group>"; };
+		2101C0981868769700A27E46 /* PicoDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoDateConverter.h; sourceTree = "<group>"; };
+		2101C0991868769700A27E46 /* PicoDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoDateConverter.m; sourceTree = "<group>"; };
+		2101C09A1868769700A27E46 /* PicoNumberConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoNumberConverter.h; sourceTree = "<group>"; };
+		2101C09B1868769700A27E46 /* PicoNumberConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoNumberConverter.m; sourceTree = "<group>"; };
+		2101C09C1868769700A27E46 /* PicoStringConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoStringConverter.h; sourceTree = "<group>"; };
+		2101C09D1868769700A27E46 /* PicoStringConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoStringConverter.m; sourceTree = "<group>"; };
+		2101C09E1868769700A27E46 /* PicoBindable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoBindable.h; sourceTree = "<group>"; };
+		2101C09F1868769700A27E46 /* PicoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConfig.h; sourceTree = "<group>"; };
+		2101C0A01868769700A27E46 /* PicoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoConfig.m; sourceTree = "<group>"; };
+		2101C0A11868769700A27E46 /* PicoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoConstants.h; sourceTree = "<group>"; };
+		2101C0A21868769700A27E46 /* PicoConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoConstants.m; sourceTree = "<group>"; };
+		2101C0A31868769700A27E46 /* PicoReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoReadable.h; sourceTree = "<group>"; };
+		2101C0A41868769700A27E46 /* PicoWritable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoWritable.h; sourceTree = "<group>"; };
+		2101C0A51868769700A27E46 /* PicoXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLReader.h; sourceTree = "<group>"; };
+		2101C0A61868769700A27E46 /* PicoXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLReader.m; sourceTree = "<group>"; };
+		2101C0A71868769700A27E46 /* PicoXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLWriter.h; sourceTree = "<group>"; };
+		2101C0A81868769700A27E46 /* PicoXMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLWriter.m; sourceTree = "<group>"; };
+		2101C0AA1868769700A27E46 /* PicoBindingSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoBindingSchema.h; sourceTree = "<group>"; };
+		2101C0AB1868769700A27E46 /* PicoBindingSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoBindingSchema.m; sourceTree = "<group>"; };
+		2101C0AC1868769700A27E46 /* PicoClassSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoClassSchema.h; sourceTree = "<group>"; };
+		2101C0AD1868769700A27E46 /* PicoClassSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoClassSchema.m; sourceTree = "<group>"; };
+		2101C0AE1868769700A27E46 /* PicoPropertySchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoPropertySchema.h; sourceTree = "<group>"; };
+		2101C0AF1868769700A27E46 /* PicoPropertySchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoPropertySchema.m; sourceTree = "<group>"; };
+		2101C0B11868769700A27E46 /* PicoXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLElement.h; sourceTree = "<group>"; };
+		2101C0B21868769700A27E46 /* PicoXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLElement.m; sourceTree = "<group>"; };
+		2101C0B31868769700A27E46 /* pico-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pico-Prefix.pch"; sourceTree = "<group>"; };
+		2101C0B51868769700A27E46 /* PicoSOAPReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPReader.h; sourceTree = "<group>"; };
+		2101C0B61868769700A27E46 /* PicoSOAPReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPReader.m; sourceTree = "<group>"; };
+		2101C0B71868769700A27E46 /* PicoSOAPWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPWriter.h; sourceTree = "<group>"; };
+		2101C0B81868769700A27E46 /* PicoSOAPWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPWriter.m; sourceTree = "<group>"; };
+		2101C0BA1868769700A27E46 /* SOAP11Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Body.h; sourceTree = "<group>"; };
+		2101C0BB1868769700A27E46 /* SOAP11Body.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Body.m; sourceTree = "<group>"; };
+		2101C0BC1868769700A27E46 /* SOAP11Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Detail.h; sourceTree = "<group>"; };
+		2101C0BD1868769700A27E46 /* SOAP11Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Detail.m; sourceTree = "<group>"; };
+		2101C0BE1868769700A27E46 /* SOAP11Envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Envelope.h; sourceTree = "<group>"; };
+		2101C0BF1868769700A27E46 /* SOAP11Envelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Envelope.m; sourceTree = "<group>"; };
+		2101C0C01868769700A27E46 /* SOAP11Fault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Fault.h; sourceTree = "<group>"; };
+		2101C0C11868769700A27E46 /* SOAP11Fault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Fault.m; sourceTree = "<group>"; };
+		2101C0C21868769700A27E46 /* SOAP11Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP11Header.h; sourceTree = "<group>"; };
+		2101C0C31868769700A27E46 /* SOAP11Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP11Header.m; sourceTree = "<group>"; };
+		2101C0C51868769700A27E46 /* SOAP12Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Body.h; sourceTree = "<group>"; };
+		2101C0C61868769700A27E46 /* SOAP12Body.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Body.m; sourceTree = "<group>"; };
+		2101C0C71868769700A27E46 /* SOAP12Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Detail.h; sourceTree = "<group>"; };
+		2101C0C81868769700A27E46 /* SOAP12Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Detail.m; sourceTree = "<group>"; };
+		2101C0C91868769700A27E46 /* SOAP12Envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Envelope.h; sourceTree = "<group>"; };
+		2101C0CA1868769700A27E46 /* SOAP12Envelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Envelope.m; sourceTree = "<group>"; };
+		2101C0CB1868769700A27E46 /* SOAP12Fault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Fault.h; sourceTree = "<group>"; };
+		2101C0CC1868769700A27E46 /* SOAP12Fault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Fault.m; sourceTree = "<group>"; };
+		2101C0CD1868769700A27E46 /* SOAP12Faultcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Faultcode.h; sourceTree = "<group>"; };
+		2101C0CE1868769700A27E46 /* SOAP12Faultcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Faultcode.m; sourceTree = "<group>"; };
+		2101C0CF1868769700A27E46 /* SOAP12FaultcodeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12FaultcodeEnum.h; sourceTree = "<group>"; };
+		2101C0D01868769700A27E46 /* SOAP12FaultcodeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12FaultcodeEnum.m; sourceTree = "<group>"; };
+		2101C0D11868769700A27E46 /* SOAP12Faultreason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Faultreason.h; sourceTree = "<group>"; };
+		2101C0D21868769700A27E46 /* SOAP12Faultreason.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Faultreason.m; sourceTree = "<group>"; };
+		2101C0D31868769700A27E46 /* SOAP12Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Header.h; sourceTree = "<group>"; };
+		2101C0D41868769700A27E46 /* SOAP12Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Header.m; sourceTree = "<group>"; };
+		2101C0D51868769700A27E46 /* SOAP12NotUnderstoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12NotUnderstoodType.h; sourceTree = "<group>"; };
+		2101C0D61868769700A27E46 /* SOAP12NotUnderstoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12NotUnderstoodType.m; sourceTree = "<group>"; };
+		2101C0D71868769700A27E46 /* SOAP12Reasontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Reasontext.h; sourceTree = "<group>"; };
+		2101C0D81868769700A27E46 /* SOAP12Reasontext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Reasontext.m; sourceTree = "<group>"; };
+		2101C0D91868769700A27E46 /* SOAP12Subcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12Subcode.h; sourceTree = "<group>"; };
+		2101C0DA1868769700A27E46 /* SOAP12Subcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12Subcode.m; sourceTree = "<group>"; };
+		2101C0DB1868769700A27E46 /* SOAP12SupportedEnvType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12SupportedEnvType.h; sourceTree = "<group>"; };
+		2101C0DC1868769700A27E46 /* SOAP12SupportedEnvType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12SupportedEnvType.m; sourceTree = "<group>"; };
+		2101C0DD1868769700A27E46 /* SOAP12UpgradeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOAP12UpgradeType.h; sourceTree = "<group>"; };
+		2101C0DE1868769700A27E46 /* SOAP12UpgradeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP12UpgradeType.m; sourceTree = "<group>"; };
+		2101C0E11868769700A27E46 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		2101C0E21868769700A27E46 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		2101C0E31868769700A27E46 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		2101C0E41868769700A27E46 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		2101C0E51868769700A27E46 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		2101C0E61868769700A27E46 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		2101C0E71868769700A27E46 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		2101C0E81868769700A27E46 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		2101C0E91868769700A27E46 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		2101C0EA1868769700A27E46 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		2101C0EB1868769700A27E46 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		2101C0EC1868769700A27E46 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		2101C0ED1868769700A27E46 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		2101C0EE1868769700A27E46 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		2101C0EF1868769700A27E46 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		2101C0F01868769700A27E46 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		2101C0F11868769700A27E46 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		2101C0F21868769700A27E46 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		2101C0F31868769700A27E46 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		2101C0F41868769700A27E46 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		2101C0F51868769700A27E46 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		2101C0F71868769700A27E46 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		2101C0F81868769700A27E46 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		2101C0FA1868769700A27E46 /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
+		2101C0FB1868769700A27E46 /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
+		2101C0FD1868769700A27E46 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		2101C0FE1868769700A27E46 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
+		2101C1001868769700A27E46 /* PicoSOAPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPClient.h; sourceTree = "<group>"; };
+		2101C1011868769700A27E46 /* PicoSOAPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPClient.m; sourceTree = "<group>"; };
+		2101C1021868769700A27E46 /* PicoSOAPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoSOAPRequestOperation.h; sourceTree = "<group>"; };
+		2101C1031868769700A27E46 /* PicoSOAPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoSOAPRequestOperation.m; sourceTree = "<group>"; };
+		2101C1041868769700A27E46 /* PicoXMLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLClient.h; sourceTree = "<group>"; };
+		2101C1051868769700A27E46 /* PicoXMLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLClient.m; sourceTree = "<group>"; };
+		2101C1061868769700A27E46 /* PicoXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoXMLRequestOperation.h; sourceTree = "<group>"; };
+		2101C1071868769700A27E46 /* PicoXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicoXMLRequestOperation.m; sourceTree = "<group>"; };
 		CEAA8F1516D9C70E0024B5D7 /* libPico.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPico.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAA8F1816D9C70E0024B5D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -264,235 +264,235 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE565A5416F5A0390097A66B /* PicoSource */ = {
+		2101C08A1868769700A27E46 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A5516F5A0390097A66B /* Core */,
-				CE565A7C16F5A0390097A66B /* Pico-Prefix.pch */,
-				CE565A7D16F5A0390097A66B /* Soap */,
-				CE565AA816F5A0390097A66B /* Vendor */,
-				CE565AC516F5A0390097A66B /* WebService */,
-			);
-			path = PicoSource;
-			sourceTree = "<group>";
-		};
-		CE565A5516F5A0390097A66B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CE565A5616F5A0390097A66B /* Cache */,
-				CE565A5B16F5A0390097A66B /* Converter */,
-				CE565A6716F5A0390097A66B /* PicoBindable.h */,
-				CE565A6816F5A0390097A66B /* PicoConfig.h */,
-				CE565A6916F5A0390097A66B /* PicoConfig.m */,
-				CE565A6A16F5A0390097A66B /* PicoConstants.h */,
-				CE565A6B16F5A0390097A66B /* PicoConstants.m */,
-				CE565A6C16F5A0390097A66B /* PicoReadable.h */,
-				CE565A6D16F5A0390097A66B /* PicoWritable.h */,
-				CE565A6E16F5A0390097A66B /* PicoXMLReader.h */,
-				CE565A6F16F5A0390097A66B /* PicoXMLReader.m */,
-				CE565A7016F5A0390097A66B /* PicoXMLWriter.h */,
-				CE565A7116F5A0390097A66B /* PicoXMLWriter.m */,
-				CE565A7216F5A0390097A66B /* Schema */,
-				CE565A7916F5A0390097A66B /* XMLSupport */,
+				2101C08B1868769700A27E46 /* Cache */,
+				2101C0901868769700A27E46 /* Converter */,
+				2101C09E1868769700A27E46 /* PicoBindable.h */,
+				2101C09F1868769700A27E46 /* PicoConfig.h */,
+				2101C0A01868769700A27E46 /* PicoConfig.m */,
+				2101C0A11868769700A27E46 /* PicoConstants.h */,
+				2101C0A21868769700A27E46 /* PicoConstants.m */,
+				2101C0A31868769700A27E46 /* PicoReadable.h */,
+				2101C0A41868769700A27E46 /* PicoWritable.h */,
+				2101C0A51868769700A27E46 /* PicoXMLReader.h */,
+				2101C0A61868769700A27E46 /* PicoXMLReader.m */,
+				2101C0A71868769700A27E46 /* PicoXMLWriter.h */,
+				2101C0A81868769700A27E46 /* PicoXMLWriter.m */,
+				2101C0A91868769700A27E46 /* Schema */,
+				2101C0B01868769700A27E46 /* XMLSupport */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		CE565A5616F5A0390097A66B /* Cache */ = {
+		2101C08B1868769700A27E46 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A5716F5A0390097A66B /* PicoCache.h */,
-				CE565A5816F5A0390097A66B /* PicoCache.m */,
-				CE565A5916F5A0390097A66B /* PicoCacheEntry.h */,
-				CE565A5A16F5A0390097A66B /* PicoCacheEntry.m */,
+				2101C08C1868769700A27E46 /* PicoCache.h */,
+				2101C08D1868769700A27E46 /* PicoCache.m */,
+				2101C08E1868769700A27E46 /* PicoCacheEntry.h */,
+				2101C08F1868769700A27E46 /* PicoCacheEntry.m */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
 		};
-		CE565A5B16F5A0390097A66B /* Converter */ = {
+		2101C0901868769700A27E46 /* Converter */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A5C16F5A0390097A66B /* PicoBoolConverter.h */,
-				CE565A5D16F5A0390097A66B /* PicoBoolConverter.m */,
-				CE565A5E16F5A0390097A66B /* PicoConvertable.h */,
-				CE565A5F16F5A0390097A66B /* PicoConverter.h */,
-				CE565A6016F5A0390097A66B /* PicoConverter.m */,
-				CE565A6116F5A0390097A66B /* PicoDateConverter.h */,
-				CE565A6216F5A0390097A66B /* PicoDateConverter.m */,
-				CE565A6316F5A0390097A66B /* PicoNumberConverter.h */,
-				CE565A6416F5A0390097A66B /* PicoNumberConverter.m */,
-				CE565A6516F5A0390097A66B /* PicoStringConverter.h */,
-				CE565A6616F5A0390097A66B /* PicoStringConverter.m */,
-				CE508E9716F95D85009DFAF4 /* PicoDataConverter.h */,
-				CE508E9816F95D85009DFAF4 /* PicoDataConverter.m */,
+				2101C0911868769700A27E46 /* PicoBoolConverter.h */,
+				2101C0921868769700A27E46 /* PicoBoolConverter.m */,
+				2101C0931868769700A27E46 /* PicoConvertable.h */,
+				2101C0941868769700A27E46 /* PicoConverter.h */,
+				2101C0951868769700A27E46 /* PicoConverter.m */,
+				2101C0961868769700A27E46 /* PicoDataConverter.h */,
+				2101C0971868769700A27E46 /* PicoDataConverter.m */,
+				2101C0981868769700A27E46 /* PicoDateConverter.h */,
+				2101C0991868769700A27E46 /* PicoDateConverter.m */,
+				2101C09A1868769700A27E46 /* PicoNumberConverter.h */,
+				2101C09B1868769700A27E46 /* PicoNumberConverter.m */,
+				2101C09C1868769700A27E46 /* PicoStringConverter.h */,
+				2101C09D1868769700A27E46 /* PicoStringConverter.m */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
 		};
-		CE565A7216F5A0390097A66B /* Schema */ = {
+		2101C0A91868769700A27E46 /* Schema */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A7316F5A0390097A66B /* PicoBindingSchema.h */,
-				CE565A7416F5A0390097A66B /* PicoBindingSchema.m */,
-				CE565A7516F5A0390097A66B /* PicoClassSchema.h */,
-				CE565A7616F5A0390097A66B /* PicoClassSchema.m */,
-				CE565A7716F5A0390097A66B /* PicoPropertySchema.h */,
-				CE565A7816F5A0390097A66B /* PicoPropertySchema.m */,
+				2101C0AA1868769700A27E46 /* PicoBindingSchema.h */,
+				2101C0AB1868769700A27E46 /* PicoBindingSchema.m */,
+				2101C0AC1868769700A27E46 /* PicoClassSchema.h */,
+				2101C0AD1868769700A27E46 /* PicoClassSchema.m */,
+				2101C0AE1868769700A27E46 /* PicoPropertySchema.h */,
+				2101C0AF1868769700A27E46 /* PicoPropertySchema.m */,
 			);
 			path = Schema;
 			sourceTree = "<group>";
 		};
-		CE565A7916F5A0390097A66B /* XMLSupport */ = {
+		2101C0B01868769700A27E46 /* XMLSupport */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A7A16F5A0390097A66B /* PicoXMLElement.h */,
-				CE565A7B16F5A0390097A66B /* PicoXMLElement.m */,
+				2101C0B11868769700A27E46 /* PicoXMLElement.h */,
+				2101C0B21868769700A27E46 /* PicoXMLElement.m */,
 			);
 			path = XMLSupport;
 			sourceTree = "<group>";
 		};
-		CE565A7D16F5A0390097A66B /* Soap */ = {
+		2101C0B41868769700A27E46 /* SOAP */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A7E16F5A0390097A66B /* PicoSOAPReader.h */,
-				CE565A7F16F5A0390097A66B /* PicoSOAPReader.m */,
-				CE565A8016F5A0390097A66B /* PicoSOAPWriter.h */,
-				CE565A8116F5A0390097A66B /* PicoSOAPWriter.m */,
-				CE565A8216F5A0390097A66B /* Soap11 */,
-				CE565A8D16F5A0390097A66B /* Soap12 */,
+				2101C0B51868769700A27E46 /* PicoSOAPReader.h */,
+				2101C0B61868769700A27E46 /* PicoSOAPReader.m */,
+				2101C0B71868769700A27E46 /* PicoSOAPWriter.h */,
+				2101C0B81868769700A27E46 /* PicoSOAPWriter.m */,
+				2101C0B91868769700A27E46 /* SOAP11 */,
+				2101C0C41868769700A27E46 /* SOAP12 */,
 			);
-			path = Soap;
+			path = SOAP;
 			sourceTree = "<group>";
 		};
-		CE565A8216F5A0390097A66B /* Soap11 */ = {
+		2101C0B91868769700A27E46 /* SOAP11 */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A8316F5A0390097A66B /* SOAP11Body.h */,
-				CE565A8416F5A0390097A66B /* SOAP11Body.m */,
-				CE565A8516F5A0390097A66B /* SOAP11Detail.h */,
-				CE565A8616F5A0390097A66B /* SOAP11Detail.m */,
-				CE565A8716F5A0390097A66B /* SOAP11Envelope.h */,
-				CE565A8816F5A0390097A66B /* SOAP11Envelope.m */,
-				CE565A8916F5A0390097A66B /* SOAP11Fault.h */,
-				CE565A8A16F5A0390097A66B /* SOAP11Fault.m */,
-				CE565A8B16F5A0390097A66B /* SOAP11Header.h */,
-				CE565A8C16F5A0390097A66B /* SOAP11Header.m */,
+				2101C0BA1868769700A27E46 /* SOAP11Body.h */,
+				2101C0BB1868769700A27E46 /* SOAP11Body.m */,
+				2101C0BC1868769700A27E46 /* SOAP11Detail.h */,
+				2101C0BD1868769700A27E46 /* SOAP11Detail.m */,
+				2101C0BE1868769700A27E46 /* SOAP11Envelope.h */,
+				2101C0BF1868769700A27E46 /* SOAP11Envelope.m */,
+				2101C0C01868769700A27E46 /* SOAP11Fault.h */,
+				2101C0C11868769700A27E46 /* SOAP11Fault.m */,
+				2101C0C21868769700A27E46 /* SOAP11Header.h */,
+				2101C0C31868769700A27E46 /* SOAP11Header.m */,
 			);
-			path = Soap11;
+			path = SOAP11;
 			sourceTree = "<group>";
 		};
-		CE565A8D16F5A0390097A66B /* Soap12 */ = {
+		2101C0C41868769700A27E46 /* SOAP12 */ = {
 			isa = PBXGroup;
 			children = (
-				CE565A8E16F5A0390097A66B /* SOAP12Body.h */,
-				CE565A8F16F5A0390097A66B /* SOAP12Body.m */,
-				CE565A9016F5A0390097A66B /* SOAP12Detail.h */,
-				CE565A9116F5A0390097A66B /* SOAP12Detail.m */,
-				CE565A9216F5A0390097A66B /* SOAP12Envelope.h */,
-				CE565A9316F5A0390097A66B /* SOAP12Envelope.m */,
-				CE565A9416F5A0390097A66B /* SOAP12Fault.h */,
-				CE565A9516F5A0390097A66B /* SOAP12Fault.m */,
-				CE565A9616F5A0390097A66B /* SOAP12Faultcode.h */,
-				CE565A9716F5A0390097A66B /* SOAP12Faultcode.m */,
-				CE565A9816F5A0390097A66B /* SOAP12FaultcodeEnum.h */,
-				CE565A9916F5A0390097A66B /* SOAP12FaultcodeEnum.m */,
-				CE565A9A16F5A0390097A66B /* SOAP12Faultreason.h */,
-				CE565A9B16F5A0390097A66B /* SOAP12Faultreason.m */,
-				CE565A9C16F5A0390097A66B /* SOAP12Header.h */,
-				CE565A9D16F5A0390097A66B /* SOAP12Header.m */,
-				CE565A9E16F5A0390097A66B /* SOAP12NotUnderstoodType.h */,
-				CE565A9F16F5A0390097A66B /* SOAP12NotUnderstoodType.m */,
-				CE565AA016F5A0390097A66B /* SOAP12Reasontext.h */,
-				CE565AA116F5A0390097A66B /* SOAP12Reasontext.m */,
-				CE565AA216F5A0390097A66B /* SOAP12Subcode.h */,
-				CE565AA316F5A0390097A66B /* SOAP12Subcode.m */,
-				CE565AA416F5A0390097A66B /* SOAP12SupportedEnvType.h */,
-				CE565AA516F5A0390097A66B /* SOAP12SupportedEnvType.m */,
-				CE565AA616F5A0390097A66B /* SOAP12UpgradeType.h */,
-				CE565AA716F5A0390097A66B /* SOAP12UpgradeType.m */,
+				2101C0C51868769700A27E46 /* SOAP12Body.h */,
+				2101C0C61868769700A27E46 /* SOAP12Body.m */,
+				2101C0C71868769700A27E46 /* SOAP12Detail.h */,
+				2101C0C81868769700A27E46 /* SOAP12Detail.m */,
+				2101C0C91868769700A27E46 /* SOAP12Envelope.h */,
+				2101C0CA1868769700A27E46 /* SOAP12Envelope.m */,
+				2101C0CB1868769700A27E46 /* SOAP12Fault.h */,
+				2101C0CC1868769700A27E46 /* SOAP12Fault.m */,
+				2101C0CD1868769700A27E46 /* SOAP12Faultcode.h */,
+				2101C0CE1868769700A27E46 /* SOAP12Faultcode.m */,
+				2101C0CF1868769700A27E46 /* SOAP12FaultcodeEnum.h */,
+				2101C0D01868769700A27E46 /* SOAP12FaultcodeEnum.m */,
+				2101C0D11868769700A27E46 /* SOAP12Faultreason.h */,
+				2101C0D21868769700A27E46 /* SOAP12Faultreason.m */,
+				2101C0D31868769700A27E46 /* SOAP12Header.h */,
+				2101C0D41868769700A27E46 /* SOAP12Header.m */,
+				2101C0D51868769700A27E46 /* SOAP12NotUnderstoodType.h */,
+				2101C0D61868769700A27E46 /* SOAP12NotUnderstoodType.m */,
+				2101C0D71868769700A27E46 /* SOAP12Reasontext.h */,
+				2101C0D81868769700A27E46 /* SOAP12Reasontext.m */,
+				2101C0D91868769700A27E46 /* SOAP12Subcode.h */,
+				2101C0DA1868769700A27E46 /* SOAP12Subcode.m */,
+				2101C0DB1868769700A27E46 /* SOAP12SupportedEnvType.h */,
+				2101C0DC1868769700A27E46 /* SOAP12SupportedEnvType.m */,
+				2101C0DD1868769700A27E46 /* SOAP12UpgradeType.h */,
+				2101C0DE1868769700A27E46 /* SOAP12UpgradeType.m */,
 			);
-			path = Soap12;
+			path = SOAP12;
 			sourceTree = "<group>";
 		};
-		CE565AA816F5A0390097A66B /* Vendor */ = {
+		2101C0DF1868769700A27E46 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				CE6883661772F7C00035337B /* OrderedDictionary */,
-				CE565AA916F5A0390097A66B /* AFNetworking */,
-				CE565ABF16F5A0390097A66B /* GDataXML */,
-				CE565AC216F5A0390097A66B /* XMLWriter */,
+				2101C0E01868769700A27E46 /* AFNetworking */,
+				2101C0F61868769700A27E46 /* GDataXML */,
+				2101C0F91868769700A27E46 /* OrderedDictionary */,
+				2101C0FC1868769700A27E46 /* XMLWriter */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
 		};
-		CE565AA916F5A0390097A66B /* AFNetworking */ = {
+		2101C0E01868769700A27E46 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				CE565AAA16F5A0390097A66B /* AFHTTPClient.h */,
-				CE565AAB16F5A0390097A66B /* AFHTTPClient.m */,
-				CE565AAC16F5A0390097A66B /* AFHTTPRequestOperation.h */,
-				CE565AAD16F5A0390097A66B /* AFHTTPRequestOperation.m */,
-				CE565AAE16F5A0390097A66B /* AFImageRequestOperation.h */,
-				CE565AAF16F5A0390097A66B /* AFImageRequestOperation.m */,
-				CE565AB016F5A0390097A66B /* AFJSONRequestOperation.h */,
-				CE565AB116F5A0390097A66B /* AFJSONRequestOperation.m */,
-				CE565AB216F5A0390097A66B /* AFJSONUtilities.h */,
-				CE565AB316F5A0390097A66B /* AFJSONUtilities.m */,
-				CE565AB416F5A0390097A66B /* AFNetworkActivityIndicatorManager.h */,
-				CE565AB516F5A0390097A66B /* AFNetworkActivityIndicatorManager.m */,
-				CE565AB616F5A0390097A66B /* AFNetworking.h */,
-				CE565AB716F5A0390097A66B /* AFPropertyListRequestOperation.h */,
-				CE565AB816F5A0390097A66B /* AFPropertyListRequestOperation.m */,
-				CE565AB916F5A0390097A66B /* AFURLConnectionOperation.h */,
-				CE565ABA16F5A0390097A66B /* AFURLConnectionOperation.m */,
-				CE565ABB16F5A0390097A66B /* AFXMLRequestOperation.h */,
-				CE565ABC16F5A0390097A66B /* AFXMLRequestOperation.m */,
-				CE565ABD16F5A0390097A66B /* UIImageView+AFNetworking.h */,
-				CE565ABE16F5A0390097A66B /* UIImageView+AFNetworking.m */,
+				2101C0E11868769700A27E46 /* AFHTTPClient.h */,
+				2101C0E21868769700A27E46 /* AFHTTPClient.m */,
+				2101C0E31868769700A27E46 /* AFHTTPRequestOperation.h */,
+				2101C0E41868769700A27E46 /* AFHTTPRequestOperation.m */,
+				2101C0E51868769700A27E46 /* AFImageRequestOperation.h */,
+				2101C0E61868769700A27E46 /* AFImageRequestOperation.m */,
+				2101C0E71868769700A27E46 /* AFJSONRequestOperation.h */,
+				2101C0E81868769700A27E46 /* AFJSONRequestOperation.m */,
+				2101C0E91868769700A27E46 /* AFJSONUtilities.h */,
+				2101C0EA1868769700A27E46 /* AFJSONUtilities.m */,
+				2101C0EB1868769700A27E46 /* AFNetworkActivityIndicatorManager.h */,
+				2101C0EC1868769700A27E46 /* AFNetworkActivityIndicatorManager.m */,
+				2101C0ED1868769700A27E46 /* AFNetworking.h */,
+				2101C0EE1868769700A27E46 /* AFPropertyListRequestOperation.h */,
+				2101C0EF1868769700A27E46 /* AFPropertyListRequestOperation.m */,
+				2101C0F01868769700A27E46 /* AFURLConnectionOperation.h */,
+				2101C0F11868769700A27E46 /* AFURLConnectionOperation.m */,
+				2101C0F21868769700A27E46 /* AFXMLRequestOperation.h */,
+				2101C0F31868769700A27E46 /* AFXMLRequestOperation.m */,
+				2101C0F41868769700A27E46 /* UIImageView+AFNetworking.h */,
+				2101C0F51868769700A27E46 /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		CE565ABF16F5A0390097A66B /* GDataXML */ = {
+		2101C0F61868769700A27E46 /* GDataXML */ = {
 			isa = PBXGroup;
 			children = (
-				CE565AC016F5A0390097A66B /* GDataXMLNode.h */,
-				CE565AC116F5A0390097A66B /* GDataXMLNode.m */,
+				2101C0F71868769700A27E46 /* GDataXMLNode.h */,
+				2101C0F81868769700A27E46 /* GDataXMLNode.m */,
 			);
 			path = GDataXML;
 			sourceTree = "<group>";
 		};
-		CE565AC216F5A0390097A66B /* XMLWriter */ = {
+		2101C0F91868769700A27E46 /* OrderedDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				CE565AC316F5A0390097A66B /* XMLWriter.h */,
-				CE565AC416F5A0390097A66B /* XMLWriter.m */,
+				2101C0FA1868769700A27E46 /* OrderedDictionary.h */,
+				2101C0FB1868769700A27E46 /* OrderedDictionary.m */,
+			);
+			path = OrderedDictionary;
+			sourceTree = "<group>";
+		};
+		2101C0FC1868769700A27E46 /* XMLWriter */ = {
+			isa = PBXGroup;
+			children = (
+				2101C0FD1868769700A27E46 /* XMLWriter.h */,
+				2101C0FE1868769700A27E46 /* XMLWriter.m */,
 			);
 			path = XMLWriter;
 			sourceTree = "<group>";
 		};
-		CE565AC516F5A0390097A66B /* WebService */ = {
+		2101C0FF1868769700A27E46 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
-				CE565AC616F5A0390097A66B /* PicoSOAPRequestOperation.h */,
-				CE565AC716F5A0390097A66B /* PicoSOAPRequestOperation.m */,
-				CE565AC816F5A0390097A66B /* PicoSOAPClient.h */,
-				CE565AC916F5A0390097A66B /* PicoSOAPClient.m */,
-				CE1D915A16F6CF2300A21D2C /* PicoXMLRequestOperation.h */,
-				CE1D915B16F6CF2300A21D2C /* PicoXMLRequestOperation.m */,
-				CE1D915E16F6D29C00A21D2C /* PicoXMLClient.h */,
-				CE1D915F16F6D29C00A21D2C /* PicoXMLClient.m */,
+				2101C1001868769700A27E46 /* PicoSOAPClient.h */,
+				2101C1011868769700A27E46 /* PicoSOAPClient.m */,
+				2101C1021868769700A27E46 /* PicoSOAPRequestOperation.h */,
+				2101C1031868769700A27E46 /* PicoSOAPRequestOperation.m */,
+				2101C1041868769700A27E46 /* PicoXMLClient.h */,
+				2101C1051868769700A27E46 /* PicoXMLClient.m */,
+				2101C1061868769700A27E46 /* PicoXMLRequestOperation.h */,
+				2101C1071868769700A27E46 /* PicoXMLRequestOperation.m */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
 		};
-		CE6883661772F7C00035337B /* OrderedDictionary */ = {
+		CE565A5416F5A0390097A66B /* PicoSource */ = {
 			isa = PBXGroup;
 			children = (
-				CE6883671772F7C00035337B /* OrderedDictionary.h */,
-				CE6883681772F7C00035337B /* OrderedDictionary.m */,
+				2101C08A1868769700A27E46 /* Core */,
+				2101C0B31868769700A27E46 /* pico-Prefix.pch */,
+				2101C0B41868769700A27E46 /* SOAP */,
+				2101C0DF1868769700A27E46 /* Vendor */,
+				2101C0FF1868769700A27E46 /* WebService */,
 			);
-			path = OrderedDictionary;
+			path = PicoSource;
 			sourceTree = "<group>";
 		};
 		CEAA8F0A16D9C70E0024B5D7 = {
@@ -527,65 +527,65 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE565AEA16F5A0390097A66B /* PicoXMLElement.h in Headers */,
-				CE565AE616F5A0390097A66B /* PicoClassSchema.h in Headers */,
-				CE565B3016F5A0390097A66B /* PicoSOAPClient.h in Headers */,
-				CE1D916016F6D29C00A21D2C /* PicoXMLClient.h in Headers */,
-				CE565AD916F5A0390097A66B /* PicoBindable.h in Headers */,
-				CE565AE816F5A0390097A66B /* PicoPropertySchema.h in Headers */,
-				CE565ADA16F5A0390097A66B /* PicoConfig.h in Headers */,
-				CE565ADC16F5A0390097A66B /* PicoConstants.h in Headers */,
-				CE565ACA16F5A0390097A66B /* PicoCache.h in Headers */,
-				CE565ACC16F5A0390097A66B /* PicoCacheEntry.h in Headers */,
-				CE565ACE16F5A0390097A66B /* PicoBoolConverter.h in Headers */,
-				CE565AD016F5A0390097A66B /* PicoConvertable.h in Headers */,
-				CE565AD116F5A0390097A66B /* PicoConverter.h in Headers */,
-				CE565AD316F5A0390097A66B /* PicoDateConverter.h in Headers */,
-				CE565AD516F5A0390097A66B /* PicoNumberConverter.h in Headers */,
-				CE565AD716F5A0390097A66B /* PicoStringConverter.h in Headers */,
-				CE565ADE16F5A0390097A66B /* PicoReadable.h in Headers */,
-				CE565ADF16F5A0390097A66B /* PicoWritable.h in Headers */,
-				CE565AE016F5A0390097A66B /* PicoXMLReader.h in Headers */,
-				CE565AE216F5A0390097A66B /* PicoXMLWriter.h in Headers */,
-				CE565AE416F5A0390097A66B /* PicoBindingSchema.h in Headers */,
-				CE565AEC16F5A0390097A66B /* Pico-Prefix.pch in Headers */,
-				CE565AED16F5A0390097A66B /* PicoSOAPReader.h in Headers */,
-				CE565AEF16F5A0390097A66B /* PicoSOAPWriter.h in Headers */,
-				CE565AF116F5A0390097A66B /* SOAP11Body.h in Headers */,
-				CE565AF316F5A0390097A66B /* SOAP11Detail.h in Headers */,
-				CE565AF516F5A0390097A66B /* SOAP11Envelope.h in Headers */,
-				CE565AF716F5A0390097A66B /* SOAP11Fault.h in Headers */,
-				CE565AF916F5A0390097A66B /* SOAP11Header.h in Headers */,
-				CE565AFB16F5A0390097A66B /* SOAP12Body.h in Headers */,
-				CE565AFD16F5A0390097A66B /* SOAP12Detail.h in Headers */,
-				CE565AFF16F5A0390097A66B /* SOAP12Envelope.h in Headers */,
-				CE565B0116F5A0390097A66B /* SOAP12Fault.h in Headers */,
-				CE565B0316F5A0390097A66B /* SOAP12Faultcode.h in Headers */,
-				CE565B0516F5A0390097A66B /* SOAP12FaultcodeEnum.h in Headers */,
-				CE565B0716F5A0390097A66B /* SOAP12Faultreason.h in Headers */,
-				CE565B0916F5A0390097A66B /* SOAP12Header.h in Headers */,
-				CE565B0B16F5A0390097A66B /* SOAP12NotUnderstoodType.h in Headers */,
-				CE565B0D16F5A0390097A66B /* SOAP12Reasontext.h in Headers */,
-				CE565B0F16F5A0390097A66B /* SOAP12Subcode.h in Headers */,
-				CE565B1116F5A0390097A66B /* SOAP12SupportedEnvType.h in Headers */,
-				CE565B1316F5A0390097A66B /* SOAP12UpgradeType.h in Headers */,
-				CE565B1516F5A0390097A66B /* AFHTTPClient.h in Headers */,
-				CE565B1716F5A0390097A66B /* AFHTTPRequestOperation.h in Headers */,
-				CE565B1916F5A0390097A66B /* AFImageRequestOperation.h in Headers */,
-				CE565B1B16F5A0390097A66B /* AFJSONRequestOperation.h in Headers */,
-				CE565B1D16F5A0390097A66B /* AFJSONUtilities.h in Headers */,
-				CE565B1F16F5A0390097A66B /* AFNetworkActivityIndicatorManager.h in Headers */,
-				CE565B2116F5A0390097A66B /* AFNetworking.h in Headers */,
-				CE565B2216F5A0390097A66B /* AFPropertyListRequestOperation.h in Headers */,
-				CE565B2416F5A0390097A66B /* AFURLConnectionOperation.h in Headers */,
-				CE565B2616F5A0390097A66B /* AFXMLRequestOperation.h in Headers */,
-				CE565B2816F5A0390097A66B /* UIImageView+AFNetworking.h in Headers */,
-				CE565B2A16F5A0390097A66B /* GDataXMLNode.h in Headers */,
-				CE565B2C16F5A0390097A66B /* XMLWriter.h in Headers */,
-				CE565B2E16F5A0390097A66B /* PicoSOAPRequestOperation.h in Headers */,
-				CE1D915C16F6CF2300A21D2C /* PicoXMLRequestOperation.h in Headers */,
-				CE508E9916F95D85009DFAF4 /* PicoDataConverter.h in Headers */,
-				CE6883691772F7C00035337B /* OrderedDictionary.h in Headers */,
+				2101C1081868769700A27E46 /* PicoCache.h in Headers */,
+				2101C12F1868769700A27E46 /* PicoSOAPWriter.h in Headers */,
+				2101C1681868769700A27E46 /* UIImageView+AFNetworking.h in Headers */,
+				2101C11F1868769700A27E46 /* PicoWritable.h in Headers */,
+				2101C1591868769700A27E46 /* AFImageRequestOperation.h in Headers */,
+				2101C13B1868769700A27E46 /* SOAP12Body.h in Headers */,
+				2101C11C1868769700A27E46 /* PicoConstants.h in Headers */,
+				2101C1511868769700A27E46 /* SOAP12SupportedEnvType.h in Headers */,
+				2101C10F1868769700A27E46 /* PicoConverter.h in Headers */,
+				2101C13F1868769700A27E46 /* SOAP12Envelope.h in Headers */,
+				2101C1741868769700A27E46 /* PicoXMLClient.h in Headers */,
+				2101C12A1868769700A27E46 /* PicoXMLElement.h in Headers */,
+				2101C1701868769700A27E46 /* PicoSOAPClient.h in Headers */,
+				2101C1191868769700A27E46 /* PicoBindable.h in Headers */,
+				2101C16C1868769700A27E46 /* OrderedDictionary.h in Headers */,
+				2101C10C1868769700A27E46 /* PicoBoolConverter.h in Headers */,
+				2101C1621868769700A27E46 /* AFPropertyListRequestOperation.h in Headers */,
+				2101C16A1868769700A27E46 /* GDataXMLNode.h in Headers */,
+				2101C1761868769700A27E46 /* PicoXMLRequestOperation.h in Headers */,
+				2101C1571868769700A27E46 /* AFHTTPRequestOperation.h in Headers */,
+				2101C15B1868769700A27E46 /* AFJSONRequestOperation.h in Headers */,
+				2101C1131868769700A27E46 /* PicoDateConverter.h in Headers */,
+				2101C14B1868769700A27E46 /* SOAP12NotUnderstoodType.h in Headers */,
+				2101C1351868769700A27E46 /* SOAP11Envelope.h in Headers */,
+				2101C1281868769700A27E46 /* PicoPropertySchema.h in Headers */,
+				2101C14F1868769700A27E46 /* SOAP12Subcode.h in Headers */,
+				2101C10A1868769700A27E46 /* PicoCacheEntry.h in Headers */,
+				2101C1331868769700A27E46 /* SOAP11Detail.h in Headers */,
+				2101C12C1868769700A27E46 /* pico-Prefix.pch in Headers */,
+				2101C1111868769700A27E46 /* PicoDataConverter.h in Headers */,
+				2101C1201868769700A27E46 /* PicoXMLReader.h in Headers */,
+				2101C15D1868769700A27E46 /* AFJSONUtilities.h in Headers */,
+				2101C1371868769700A27E46 /* SOAP11Fault.h in Headers */,
+				2101C15F1868769700A27E46 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				2101C1551868769700A27E46 /* AFHTTPClient.h in Headers */,
+				2101C16E1868769700A27E46 /* XMLWriter.h in Headers */,
+				2101C1641868769700A27E46 /* AFURLConnectionOperation.h in Headers */,
+				2101C10E1868769700A27E46 /* PicoConvertable.h in Headers */,
+				2101C14D1868769700A27E46 /* SOAP12Reasontext.h in Headers */,
+				2101C13D1868769700A27E46 /* SOAP12Detail.h in Headers */,
+				2101C1411868769700A27E46 /* SOAP12Fault.h in Headers */,
+				2101C1721868769700A27E46 /* PicoSOAPRequestOperation.h in Headers */,
+				2101C1661868769700A27E46 /* AFXMLRequestOperation.h in Headers */,
+				2101C1391868769700A27E46 /* SOAP11Header.h in Headers */,
+				2101C1171868769700A27E46 /* PicoStringConverter.h in Headers */,
+				2101C1151868769700A27E46 /* PicoNumberConverter.h in Headers */,
+				2101C1611868769700A27E46 /* AFNetworking.h in Headers */,
+				2101C1471868769700A27E46 /* SOAP12Faultreason.h in Headers */,
+				2101C1531868769700A27E46 /* SOAP12UpgradeType.h in Headers */,
+				2101C1261868769700A27E46 /* PicoClassSchema.h in Headers */,
+				2101C11A1868769700A27E46 /* PicoConfig.h in Headers */,
+				2101C1221868769700A27E46 /* PicoXMLWriter.h in Headers */,
+				2101C1241868769700A27E46 /* PicoBindingSchema.h in Headers */,
+				2101C1431868769700A27E46 /* SOAP12Faultcode.h in Headers */,
+				2101C1491868769700A27E46 /* SOAP12Header.h in Headers */,
+				2101C1311868769700A27E46 /* SOAP11Body.h in Headers */,
+				2101C1451868769700A27E46 /* SOAP12FaultcodeEnum.h in Headers */,
+				2101C11E1868769700A27E46 /* PicoReadable.h in Headers */,
+				2101C12D1868769700A27E46 /* PicoSOAPReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,59 +642,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE565ACB16F5A0390097A66B /* PicoCache.m in Sources */,
-				CE565ACD16F5A0390097A66B /* PicoCacheEntry.m in Sources */,
-				CE565ACF16F5A0390097A66B /* PicoBoolConverter.m in Sources */,
-				CE565AD216F5A0390097A66B /* PicoConverter.m in Sources */,
-				CE565AD416F5A0390097A66B /* PicoDateConverter.m in Sources */,
-				CE565AD616F5A0390097A66B /* PicoNumberConverter.m in Sources */,
-				CE565AD816F5A0390097A66B /* PicoStringConverter.m in Sources */,
-				CE565ADB16F5A0390097A66B /* PicoConfig.m in Sources */,
-				CE565ADD16F5A0390097A66B /* PicoConstants.m in Sources */,
-				CE565AE116F5A0390097A66B /* PicoXMLReader.m in Sources */,
-				CE565AE316F5A0390097A66B /* PicoXMLWriter.m in Sources */,
-				CE565AE516F5A0390097A66B /* PicoBindingSchema.m in Sources */,
-				CE565AE716F5A0390097A66B /* PicoClassSchema.m in Sources */,
-				CE565AE916F5A0390097A66B /* PicoPropertySchema.m in Sources */,
-				CE565AEB16F5A0390097A66B /* PicoXMLElement.m in Sources */,
-				CE565AEE16F5A0390097A66B /* PicoSOAPReader.m in Sources */,
-				CE565AF016F5A0390097A66B /* PicoSOAPWriter.m in Sources */,
-				CE565AF216F5A0390097A66B /* SOAP11Body.m in Sources */,
-				CE565AF416F5A0390097A66B /* SOAP11Detail.m in Sources */,
-				CE565AF616F5A0390097A66B /* SOAP11Envelope.m in Sources */,
-				CE565AF816F5A0390097A66B /* SOAP11Fault.m in Sources */,
-				CE565AFA16F5A0390097A66B /* SOAP11Header.m in Sources */,
-				CE565AFC16F5A0390097A66B /* SOAP12Body.m in Sources */,
-				CE565AFE16F5A0390097A66B /* SOAP12Detail.m in Sources */,
-				CE565B0016F5A0390097A66B /* SOAP12Envelope.m in Sources */,
-				CE565B0216F5A0390097A66B /* SOAP12Fault.m in Sources */,
-				CE565B0416F5A0390097A66B /* SOAP12Faultcode.m in Sources */,
-				CE565B0616F5A0390097A66B /* SOAP12FaultcodeEnum.m in Sources */,
-				CE565B0816F5A0390097A66B /* SOAP12Faultreason.m in Sources */,
-				CE565B0A16F5A0390097A66B /* SOAP12Header.m in Sources */,
-				CE565B0C16F5A0390097A66B /* SOAP12NotUnderstoodType.m in Sources */,
-				CE565B0E16F5A0390097A66B /* SOAP12Reasontext.m in Sources */,
-				CE565B1016F5A0390097A66B /* SOAP12Subcode.m in Sources */,
-				CE565B1216F5A0390097A66B /* SOAP12SupportedEnvType.m in Sources */,
-				CE565B1416F5A0390097A66B /* SOAP12UpgradeType.m in Sources */,
-				CE565B1616F5A0390097A66B /* AFHTTPClient.m in Sources */,
-				CE565B1816F5A0390097A66B /* AFHTTPRequestOperation.m in Sources */,
-				CE565B1A16F5A0390097A66B /* AFImageRequestOperation.m in Sources */,
-				CE565B1C16F5A0390097A66B /* AFJSONRequestOperation.m in Sources */,
-				CE565B1E16F5A0390097A66B /* AFJSONUtilities.m in Sources */,
-				CE565B2016F5A0390097A66B /* AFNetworkActivityIndicatorManager.m in Sources */,
-				CE565B2316F5A0390097A66B /* AFPropertyListRequestOperation.m in Sources */,
-				CE565B2516F5A0390097A66B /* AFURLConnectionOperation.m in Sources */,
-				CE565B2716F5A0390097A66B /* AFXMLRequestOperation.m in Sources */,
-				CE565B2916F5A0390097A66B /* UIImageView+AFNetworking.m in Sources */,
-				CE565B2B16F5A0390097A66B /* GDataXMLNode.m in Sources */,
-				CE565B2D16F5A0390097A66B /* XMLWriter.m in Sources */,
-				CE565B2F16F5A0390097A66B /* PicoSOAPRequestOperation.m in Sources */,
-				CE565B3116F5A0390097A66B /* PicoSOAPClient.m in Sources */,
-				CE1D915D16F6CF2300A21D2C /* PicoXMLRequestOperation.m in Sources */,
-				CE1D916116F6D29C00A21D2C /* PicoXMLClient.m in Sources */,
-				CE508E9A16F95D85009DFAF4 /* PicoDataConverter.m in Sources */,
-				CE68836A1772F7C00035337B /* OrderedDictionary.m in Sources */,
+				2101C1651868769700A27E46 /* AFURLConnectionOperation.m in Sources */,
+				2101C1671868769700A27E46 /* AFXMLRequestOperation.m in Sources */,
+				2101C1301868769700A27E46 /* PicoSOAPWriter.m in Sources */,
+				2101C13A1868769700A27E46 /* SOAP11Header.m in Sources */,
+				2101C1581868769700A27E46 /* AFHTTPRequestOperation.m in Sources */,
+				2101C1691868769700A27E46 /* UIImageView+AFNetworking.m in Sources */,
+				2101C1341868769700A27E46 /* SOAP11Detail.m in Sources */,
+				2101C1291868769700A27E46 /* PicoPropertySchema.m in Sources */,
+				2101C14C1868769700A27E46 /* SOAP12NotUnderstoodType.m in Sources */,
+				2101C16D1868769700A27E46 /* OrderedDictionary.m in Sources */,
+				2101C12B1868769700A27E46 /* PicoXMLElement.m in Sources */,
+				2101C11D1868769700A27E46 /* PicoConstants.m in Sources */,
+				2101C1251868769700A27E46 /* PicoBindingSchema.m in Sources */,
+				2101C15A1868769700A27E46 /* AFImageRequestOperation.m in Sources */,
+				2101C15E1868769700A27E46 /* AFJSONUtilities.m in Sources */,
+				2101C10B1868769700A27E46 /* PicoCacheEntry.m in Sources */,
+				2101C1321868769700A27E46 /* SOAP11Body.m in Sources */,
+				2101C14A1868769700A27E46 /* SOAP12Header.m in Sources */,
+				2101C16B1868769700A27E46 /* GDataXMLNode.m in Sources */,
+				2101C1441868769700A27E46 /* SOAP12Faultcode.m in Sources */,
+				2101C1481868769700A27E46 /* SOAP12Faultreason.m in Sources */,
+				2101C11B1868769700A27E46 /* PicoConfig.m in Sources */,
+				2101C1461868769700A27E46 /* SOAP12FaultcodeEnum.m in Sources */,
+				2101C1101868769700A27E46 /* PicoConverter.m in Sources */,
+				2101C12E1868769700A27E46 /* PicoSOAPReader.m in Sources */,
+				2101C1751868769700A27E46 /* PicoXMLClient.m in Sources */,
+				2101C1501868769700A27E46 /* SOAP12Subcode.m in Sources */,
+				2101C1381868769700A27E46 /* SOAP11Fault.m in Sources */,
+				2101C1401868769700A27E46 /* SOAP12Envelope.m in Sources */,
+				2101C1521868769700A27E46 /* SOAP12SupportedEnvType.m in Sources */,
+				2101C1771868769700A27E46 /* PicoXMLRequestOperation.m in Sources */,
+				2101C1181868769700A27E46 /* PicoStringConverter.m in Sources */,
+				2101C1711868769700A27E46 /* PicoSOAPClient.m in Sources */,
+				2101C1731868769700A27E46 /* PicoSOAPRequestOperation.m in Sources */,
+				2101C1541868769700A27E46 /* SOAP12UpgradeType.m in Sources */,
+				2101C1601868769700A27E46 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				2101C1271868769700A27E46 /* PicoClassSchema.m in Sources */,
+				2101C1361868769700A27E46 /* SOAP11Envelope.m in Sources */,
+				2101C14E1868769700A27E46 /* SOAP12Reasontext.m in Sources */,
+				2101C16F1868769700A27E46 /* XMLWriter.m in Sources */,
+				2101C1211868769700A27E46 /* PicoXMLReader.m in Sources */,
+				2101C10D1868769700A27E46 /* PicoBoolConverter.m in Sources */,
+				2101C1231868769700A27E46 /* PicoXMLWriter.m in Sources */,
+				2101C13E1868769700A27E46 /* SOAP12Detail.m in Sources */,
+				2101C13C1868769700A27E46 /* SOAP12Body.m in Sources */,
+				2101C1141868769700A27E46 /* PicoDateConverter.m in Sources */,
+				2101C1161868769700A27E46 /* PicoNumberConverter.m in Sources */,
+				2101C1561868769700A27E46 /* AFHTTPClient.m in Sources */,
+				2101C1421868769700A27E46 /* SOAP12Fault.m in Sources */,
+				2101C1091868769700A27E46 /* PicoCache.m in Sources */,
+				2101C15C1868769700A27E46 /* AFJSONRequestOperation.m in Sources */,
+				2101C1631868769700A27E46 /* AFPropertyListRequestOperation.m in Sources */,
+				2101C1121868769700A27E46 /* PicoDataConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
