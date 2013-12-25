@@ -144,4 +144,6 @@
 // wrote unescaped text to the stream
 - (void) write:(NSString*)value;
 
+-(void) writeNamespaceToStream:(NSString*)prefix namespaceURI:(NSString*)namespaceURI;
+
 @end

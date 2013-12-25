@@ -63,7 +63,8 @@ static NSString *XSD_NAMESPACE = @"http://www.w3.org/2001/XMLSchema";
     }
     
     [xmlWriter writeStartElementWithNamespace:namespace localName:xmlName];
-    
+    [xmlWriter writeNamespaceToStream:@"n0" namespaceURI:innerNamespace];
+
     [super writeObject:xmlWriter source:obj];
     
     [xmlWriter writeEndElementWithNamespace:namespace localName:xmlName];
