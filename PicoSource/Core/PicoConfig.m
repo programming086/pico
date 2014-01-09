@@ -20,7 +20,9 @@ NSString *const DEFAULT_XML_ENCODING = @"UTF-8";
     if (self) {
         self.indent = YES;
         self.encoding = DEFAULT_XML_ENCODING;
-        self.locale = [NSLocale currentLocale];
+#warning use US locale for point '.' in  double, вместо ','
+//        self.locale = [NSLocale currentLocale];
+        self.locale = [[[NSLocale alloc] initWithLocaleIdentifier: @"es_US"] autorelease];
         _numberFormatter = [[NSNumberFormatter alloc] init];
         _numberFormatter.locale = self.locale;
         
