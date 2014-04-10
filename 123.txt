@@ -1,6 +1,4 @@
-All.txt
-Pico.xcodeproj
-PicoSource
+123.txt
 All.txt
 Pico.xcodeproj
 PicoSource
