@@ -1,3 +1,6 @@
 All.txt
 Pico.xcodeproj
 PicoSource
+All.txt
+Pico.xcodeproj
+PicoSource
