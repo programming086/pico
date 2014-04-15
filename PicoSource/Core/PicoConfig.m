@@ -22,7 +22,7 @@ NSString *const DEFAULT_XML_ENCODING = @"UTF-8";
         self.encoding = DEFAULT_XML_ENCODING;
 #warning use US locale for point '.' in  double, вместо ','
 //        self.locale = [NSLocale currentLocale];
-        self.locale = [[[NSLocale alloc] initWithLocaleIdentifier: @"es_US"] autorelease];
+        self.locale = [[NSLocale alloc] initWithLocaleIdentifier: @"es_US"];
         _numberFormatter = [[NSNumberFormatter alloc] init];
         _numberFormatter.locale = self.locale;
         
@@ -36,13 +36,5 @@ NSString *const DEFAULT_XML_ENCODING = @"UTF-8";
     return self;
 }
 
--(void) dealloc {
-    self.encoding = nil;
-    self.locale = nil;
-    self.numberFormatter = nil;
-    self.timeZone = nil;
-    self.dateFormatter = nil;
-    [super dealloc];
-}
 
 @end

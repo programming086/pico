@@ -58,11 +58,6 @@
 -(void)dealloc {
 	
     self.parent = nil;
-	self.name = nil;
-	self.value = nil;
-	self.children = nil;
-	self.attributes = nil;
-	[super dealloc];
 	
 }
 

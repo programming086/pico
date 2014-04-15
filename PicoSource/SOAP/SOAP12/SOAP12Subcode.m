@@ -24,20 +24,13 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Value" propertyName:@"value" type:PICO_TYPE_QNAME clazz:nil];
     [map setObject:ps forKey:@"value"];
-    [ps release];
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Subcode" propertyName:@"subcode" type:PICO_TYPE_OBJECT clazz:[SOAP12Subcode class]];
     [map setObject:ps forKey:@"subcode"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.value = nil;
-    self.subcode = nil;
-    [super dealloc];
-}
 
 @end

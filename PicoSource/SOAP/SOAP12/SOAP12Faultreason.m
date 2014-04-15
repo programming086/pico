@@ -23,16 +23,11 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT_ARRAY xmlName:@"Text" propertyName:@"text" type:PICO_TYPE_OBJECT clazz:[SOAP12Reasontext class]];
     [map setObject:ps forKey:@"text"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.text = nil;
-    [super dealloc];
-}
 
 @end

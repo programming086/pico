@@ -26,7 +26,7 @@
  
  type : NSString, wrapper for primitive qname
 */
-@property (nonatomic, retain) NSString *qname;
+@property (nonatomic, strong) NSString *qname;
 
 
 @end

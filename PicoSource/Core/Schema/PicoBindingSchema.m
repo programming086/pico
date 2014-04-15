@@ -41,14 +41,14 @@ static const int CACHE_SIZE = 100;
 		_property2ElementSchemaMapping = [[OrderedDictionary alloc] init];
 		_property2AttributeSchemaMapping = [[NSMutableDictionary alloc] init];
 		
-		_className = [NSStringFromClass(clazz) retain];
+		_className = NSStringFromClass(clazz);
 		
 		if (![clazz conformsToProtocol:@protocol(PicoBindable)]) {
 			@throw [NSException exceptionWithName:@"BindingException" reason:[NSString stringWithFormat:@"class : %@ does not conform to PicoBindable protocol", self.className] userInfo:nil];
 		}
 		
 		_classSchema = [clazz getClassMetaData];
-		[_classSchema retain];
+//		[_classSchema retain];
 		
 		NSMutableDictionary *propertyMetaDataMapping = [clazz getPropertyMetaData];
 		
@@ -76,7 +76,6 @@ static const int CACHE_SIZE = 100;
     if (bindingSchema == nil) {
         bindingSchema = [[PicoBindingSchema alloc] initWith: clazz];
         [schemaCache setObject: bindingSchema forKey: clazz];
-        [bindingSchema release];
     }
     return bindingSchema;
 }
@@ -88,18 +87,6 @@ static const int CACHE_SIZE = 100;
 
 -(void)buildMapping:(NSMutableDictionary *)map {
     if (!map) return;
-    
-    
-    
-#warning ЗДЕСЬ МЕНЯЕТСЯ ПОРЯДОК property
-    // пришло
-//    login = <PicoPropertySchema: 0x8b787a0>;
-//    password = <PicoPropertySchema: 0x8b85980>;
-//    email = <PicoPropertySchema: 0x8b71180>;
-//    salt = <PicoPropertySchema: 0x8b85ec0>;
-//    verificationSuccessUrl = <PicoPropertySchema: 0x8b6b570>;
-    
-    // а занесли в _property2ElementSchemaMapping
     
 	for (NSString *propertyName in map) {
 		PicoPropertySchema *ps = [map objectForKey:propertyName];
@@ -113,26 +100,12 @@ static const int CACHE_SIZE = 100;
 			[_xml2ElementSchemaMapping setObject:ps forKey:[ps xmlName]];
 		} else if ([[ps propertyKind] isEqualToString:PICO_KIND_VALUE]) {
 			_valueSchema = ps;
-			[ps retain];
 		} else if ([[ps propertyKind] isEqualToString:PICO_KIND_ANY_ELEMENT]) {
             _anyElementSchema = ps;
-            [ps retain];
         }
 		
 	}
 }
 
--(void)dealloc {
-	[_classSchema release];
-	[_xml2AttributeSchemaMapping release];
-	[_xml2ElementSchemaMapping release];
-	[_valueSchema release];
-    [_anyElementSchema release];
-	[_property2ElementSchemaMapping release];
-	[_property2AttributeSchemaMapping release];
-	[_className release];
-	
-	[super dealloc];
-}
 
 @end

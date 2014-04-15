@@ -28,14 +28,14 @@
  
  type : NSString, wrapper for primitive qname
 */
-@property (nonatomic, retain) NSString *value;
+@property (nonatomic, strong) NSString *value;
 
 /**
  (public property)
  
  type : class SOAP12Subcode
 */
-@property (nonatomic, retain) SOAP12Subcode *subcode;
+@property (nonatomic, strong) SOAP12Subcode *subcode;
 
 
 @end

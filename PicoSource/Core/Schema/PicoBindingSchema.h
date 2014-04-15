@@ -11,24 +11,24 @@
 @interface PicoBindingSchema : NSObject {
 	
 @private
-	PicoClassSchema *_classSchema;
+	PicoClassSchema *__unsafe_unretained _classSchema;
 	NSMutableDictionary *_xml2AttributeSchemaMapping;
 	NSMutableDictionary *_xml2ElementSchemaMapping;
-	PicoPropertySchema *_valueSchema;
-    PicoPropertySchema *_anyElementSchema;
+	PicoPropertySchema *__unsafe_unretained _valueSchema;
+    PicoPropertySchema *__unsafe_unretained _anyElementSchema;
 	NSMutableDictionary *_property2ElementSchemaMapping;
 	NSMutableDictionary *_property2AttributeSchemaMapping;
-	NSString *_className;
+	NSString *__unsafe_unretained _className;
 }
 
-@property (nonatomic, readonly) PicoClassSchema *classSchema;
+@property (unsafe_unretained, nonatomic, readonly) PicoClassSchema *classSchema;
 @property (nonatomic, readonly) NSMutableDictionary *xml2AttributeSchemaMapping;
 @property (nonatomic, readonly) NSMutableDictionary *xml2ElementSchemaMapping;
-@property (nonatomic, readonly) PicoPropertySchema  *valueSchema;
-@property (nonatomic, readonly) PicoPropertySchema  *anyElementSchema;
+@property (unsafe_unretained, nonatomic, readonly) PicoPropertySchema  *valueSchema;
+@property (unsafe_unretained, nonatomic, readonly) PicoPropertySchema  *anyElementSchema;
 @property (nonatomic, readonly) NSMutableDictionary *property2ElementSchemaMapping;
 @property (nonatomic, readonly) NSMutableDictionary *property2AttributeSchemaMapping;
-@property (nonatomic, readonly) NSString *className;
+@property (unsafe_unretained, nonatomic, readonly) NSString *className;
 
 -(id)initWith: (Class)clazz;
 

@@ -28,7 +28,7 @@
  entry type : class SOAP12SupportedEnvType
 */
 
-@property (nonatomic, retain) NSMutableArray *supportedEnvelope;
+@property (nonatomic, strong) NSMutableArray *supportedEnvelope;
 
 
 @end

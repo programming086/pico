@@ -29,7 +29,7 @@
  entry type : PicoAnyElement, wrapper for primitive anyelement
 */
 
-@property (nonatomic, retain) NSMutableArray *any;
+@property (nonatomic, strong) NSMutableArray *any;
 
 
 @end

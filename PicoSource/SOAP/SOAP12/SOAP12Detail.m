@@ -22,16 +22,11 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ANY_ELEMENT xmlName:@"any" propertyName:@"any" type:PICO_TYPE_ANYELEMENT clazz:nil];
     [map setObject:ps forKey:@"any"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.any = nil;
-    [super dealloc];
-}
 
 @end

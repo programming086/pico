@@ -13,7 +13,6 @@
 // note: this method is only for internal use, DO NOT CHANGE!
 +(PicoClassSchema *)getClassMetaData {
     PicoClassSchema *cs = [[PicoClassSchema alloc] initWithXmlName:@"Upgrade" nsUri:@"http://www.w3.org/2003/05/soap-envelope"];
-    [cs autorelease];
     return cs;
 }
 
@@ -25,16 +24,11 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT_ARRAY xmlName:@"SupportedEnvelope" propertyName:@"supportedEnvelope" type:PICO_TYPE_OBJECT clazz:[SOAP12SupportedEnvType class]];
     [map setObject:ps forKey:@"supportedEnvelope"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.supportedEnvelope = nil;
-    [super dealloc];
-}
 
 @end

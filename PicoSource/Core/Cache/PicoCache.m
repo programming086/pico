@@ -15,8 +15,8 @@
     NSMutableArray *_entriesByTime;
 }
 
-@property (retain, nonatomic) NSMutableDictionary *entries;
-@property (retain, nonatomic) NSMutableArray *entriesByTime;
+@property (strong, nonatomic) NSMutableDictionary *entries;
+@property (strong, nonatomic) NSMutableArray *entriesByTime;
 
 - (void)evictObjectsExceedingCountLimit;
 
@@ -84,7 +84,6 @@
         [_entries setObject:entry forKey:key];
         [_entriesByTime addObject:entry];
         
-        [entry release];
         
         // Enforce the count limit
         [self evictObjectsExceedingCountLimit];
@@ -139,10 +138,5 @@
     }
 }
 
--(void) dealloc {
-    self.entries = nil;
-    self.entriesByTime = nil;
-    [super dealloc];
-}
 
 @end

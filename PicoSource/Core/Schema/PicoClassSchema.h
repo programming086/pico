@@ -12,13 +12,13 @@
     
 @private
     // xml name
-    NSString *_xmlName;
+    NSString *__unsafe_unretained _xmlName;
     // namespace URI
-    NSString *_nsURI;
+    NSString *__unsafe_unretained _nsURI;
 }
 
-@property (nonatomic, assign) NSString *xmlName;
-@property (nonatomic, assign) NSString *nsURI;
+@property (nonatomic, unsafe_unretained) NSString *xmlName;
+@property (nonatomic, unsafe_unretained) NSString *nsURI;
 
 -(id)initWithXmlName:(NSString *)name nsUri: (NSString *)uri;
 

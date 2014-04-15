@@ -23,7 +23,7 @@ enum {
 
 @interface PicoSOAPClient ()
 
-@property (readwrite, nonatomic, retain) NSURL *endpointURL;
+@property (readwrite, nonatomic, strong) NSURL *endpointURL;
 
 @end
 
@@ -159,11 +159,8 @@ enum {
             SOAP11Header *soap11Header = [[SOAP11Header alloc] init];
             soap11Header.any = self.customSoapHeaders;
             soap11Envelope.header = soap11Header;
-            [soap11Header release];
         }
         soapData = [soapWriter toData:soap11Envelope];
-        [soap11Body release];
-        [soap11Envelope release];
     } else {
         SOAP12Envelope *soap12Envelope = [[SOAP12Envelope alloc] init];
         SOAP12Body *soap12Body = [[SOAP12Body alloc] init];
@@ -174,16 +171,12 @@ enum {
             soap12Header.any = self.customSoapHeaders;
             soap12Envelope.header = soap12Header;
             
-            [soap12Header release];
         }
         soapData = [soapWriter toData:soap12Envelope];
         
         
-        [soap12Body release];
-        [soap12Envelope release];
     }
     
-    [soapWriter release];
     
     NSAssert(soapData != nil, @"Expect success soap marshalling");
     
@@ -193,7 +186,6 @@ enum {
         NSLog(@"%@", message);
 
         
-        [message release];
     }
     
     request.HTTPBody = soapData;
@@ -201,11 +193,4 @@ enum {
     return request;
 }
 
-- (void)dealloc {
-    self.endpointURL = nil;
-    self.config = nil;
-    self.additionalParameters = nil;
-    self.customSoapHeaders = nil;
-    [super dealloc];
-}
 @end

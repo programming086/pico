@@ -76,7 +76,7 @@
 
 - (id)objectAtIndex:(NSUInteger)anIndex;
 
-- (int)indexOfKey:(id)aKey;
+- (NSUInteger)indexOfKey:(id)aKey;
 
 - (id)keyAtIndex:(NSUInteger)anIndex;
 

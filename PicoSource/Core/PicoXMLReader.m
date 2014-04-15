@@ -20,7 +20,7 @@
 @synthesize config = _config;
 
 - (id) init {
-    PicoConfig *config = [[[PicoConfig alloc] init] autorelease];
+    PicoConfig *config = [[PicoConfig alloc] init];
     return [self initWithConfig:config];
 }
 
@@ -50,7 +50,6 @@
     }
     NSString *rootName = [rootElement localName];
     if (![xmlName isEqualToString: rootName]) {
-        [doc release];
 		@throw [NSException exceptionWithName:@"ReaderException" reason:[NSString stringWithFormat:@"root name mismatch , xml name : %@, root name : %@", xmlName, rootName] userInfo:nil];
 	}
     
@@ -58,8 +57,7 @@
     
     [self read: obj element: rootElement];
     
-    [obj autorelease];
-    [doc release];
+//    [obj autorelease];
     
     return obj;
 }
@@ -153,13 +151,11 @@
                     } else if ([ps.propertyType isEqualToString:PICO_TYPE_OBJECT]) { // object
                         id obj = [ps.clazz new];
                         [value setValue:obj forKey: ps.propertyName];
-                        [obj release];
                         [self read: obj element: childElement];
                     }
                 } else if ([ps.propertyKind isEqualToString: PICO_KIND_ELEMENT_ARRAY]) {
                     NSMutableArray *array = [[NSMutableArray alloc] init];
                     [value setValue:array forKey: ps.propertyName];
-                    [array release];
                     for(GDataXMLElement *childElement in childElements) {
                         // primitive
                         if ([PicoConverter isPrimitive: ps.propertyType]) {
@@ -171,14 +167,12 @@
                         } else if ([ps.propertyType isEqualToString:PICO_TYPE_OBJECT]) { // object
                             id obj = [ps.clazz new];
                             [array addObject:obj];
-                            [obj release];
                             [self read: obj element: childElement];
                         }
                     }
                 }
             }
             
-            [childElements release];
         }
     }
 }
@@ -206,7 +200,6 @@
                 }
             }
             [value setValue:anyChildElements forKey: anyPs.propertyName];
-            [anyChildElements release];
         }
     }
 }
@@ -235,22 +228,19 @@
         
         NSMutableArray *array = [[NSMutableArray alloc] init];
         [value setValue:array forKey: anyPs.propertyName];
-        [array release];
         for(GDataXMLElement *childElement in childElements) {
             id obj = [clazz new];
             [array addObject:obj];
-            [obj release];
             [self read: obj element: childElement];
         }
         result = YES;
     }
-    [childElements release];
     
     return result;
 }
 
 -(PicoXMLElement *)convertToPicoElement:(GDataXMLElement *)element {
-    PicoXMLElement *picoElement = [[[PicoXMLElement alloc] init] autorelease];
+    PicoXMLElement *picoElement = [[PicoXMLElement alloc] init];
     picoElement.name = element.localName;
     picoElement.nsUri = element.URI;
     if ([element childCount] == 1) {
@@ -262,7 +252,6 @@
     if (element.attributes) {
         NSMutableDictionary *attrDic = [[NSMutableDictionary alloc] init];
         picoElement.attributes = attrDic;
-        [attrDic release];
         for(GDataXMLNode *attr in element.attributes) {
             [attrDic setObject:attr.stringValue forKey:attr.localName];
         }
@@ -270,7 +259,6 @@
     if (element.children) {
         NSMutableArray *childrenArray = [[NSMutableArray alloc] init];
         picoElement.children = childrenArray;
-        [childrenArray release];
         for(GDataXMLNode *node in element.children) {
             if ([node kind] == GDataXMLElementKind) {
                 PicoXMLElement *childPicoElement = [self convertToPicoElement:(GDataXMLElement *)node];
@@ -290,9 +278,5 @@
 }
 
 
--(void) dealloc {
-    self.config = nil;
-    [super dealloc];
-}
 
 @end

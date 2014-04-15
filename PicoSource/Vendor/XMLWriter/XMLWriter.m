@@ -45,7 +45,7 @@
 // write namespace attribute to stream
 - (void) writeNamespaceToStream:(NSString*)prefix namespaceURI:(NSString*)namespaceURI;
 // write a length of text to the stream with escaping
-- (void) writeEscapeCharacters:(const UniChar*)characters length:(int)length;
+- (void) writeEscapeCharacters:(const UniChar*)characters length:(NSUInteger)length;
 @end
 
 
@@ -101,7 +101,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		[namespaceCounts addObject:previousCount];
 	} else {
 		// the count has changed, save the it
-		NSNumber* count = [NSNumber numberWithInt:[namespaceURIs count]];
+		NSNumber* count = [NSNumber numberWithUnsignedInteger:[namespaceURIs count]];
         
 		[namespaceCounts addObject:count];
 	}
@@ -240,7 +240,6 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 			[self write:@"\""];
 			
 			encoding = aEncoding;
-			[aEncoding retain];
 		}
 		[self write:@" ?>"];
 		
@@ -585,9 +584,9 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 			@throw([NSException exceptionWithName:@"XMLWriterException" reason:[NSString stringWithFormat:@"Could not allocate data buffer of %i unicode characters", 256] userInfo:NULL]);
 		}
 		
-		int count = 0;
+		NSUInteger count = 0;
 		do {
-			int length;
+			NSUInteger length;
 			if(count + 256 < [value length]) {
 				length = 256;
 			} else {
@@ -605,11 +604,11 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	}
 }
 
-- (void)writeEscapeCharacters:(const UniChar*)characters length:(int)length {
-	int rangeStart = 0;
-	int rangeLength = 0;
+- (void)writeEscapeCharacters:(const UniChar*)characters length:(NSUInteger)length {
+	NSUInteger rangeStart = 0;
+	NSUInteger rangeLength = 0;
 	
-	for(int i = 0; i < length; i++) {
+	for(NSUInteger i = 0; i < length; i++) {
 		
 		UniChar c = characters[i];
 		if (c <= 0xd7ff)  {
@@ -743,24 +742,5 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	}
 }
 
--(void) dealloc {
-    [writer release];
-	[encoding release];
-	
-	[elementLocalNames release];
-	[elementNamespaceURIs release];
-	
-	[namespaceURIs release];
-	[namespaceCounts release];
-	[namespaceWritten release];
-	
-	[namespaceURIPrefixMap release];
-	[prefixNamespaceURIMap release];
-	
-	[indentation release];
-	[lineBreak release];
-	
-    [super dealloc];
-}
 
 @end

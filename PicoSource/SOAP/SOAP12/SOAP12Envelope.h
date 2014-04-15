@@ -29,14 +29,14 @@
  
  type : class SOAP12Header
 */
-@property (nonatomic, retain) SOAP12Header *header;
+@property (nonatomic, strong) SOAP12Header *header;
 
 /**
  (public property)
  
  type : class SOAP12Body
 */
-@property (nonatomic, retain) SOAP12Body *body;
+@property (nonatomic, strong) SOAP12Body *body;
 
 
 @end

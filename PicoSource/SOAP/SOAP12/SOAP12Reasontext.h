@@ -27,14 +27,14 @@
  
  type : NSString, wrapper for primitive string
 */
-@property (nonatomic, retain) NSString *value;
+@property (nonatomic, strong) NSString *value;
 
 /**
  (public property)
  
  type : NSString, wrapper for primitive string
 */
-@property (nonatomic, retain) NSString *lang;
+@property (nonatomic, strong) NSString *lang;
 
 
 @end

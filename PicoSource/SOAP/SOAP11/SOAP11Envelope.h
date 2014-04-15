@@ -30,14 +30,14 @@
  
  type : class SOAP11Header
 */
-@property (nonatomic, retain) SOAP11Header *header;
+@property (nonatomic, strong) SOAP11Header *header;
 
 /**
  (public property)
  
  type : class SOAP11Body
 */
-@property (nonatomic, retain) SOAP11Body *body;
+@property (nonatomic, strong) SOAP11Body *body;
 
 /**
  (public property)
@@ -45,7 +45,7 @@
  entry type : PicoAnyElement, wrapper for primitive anyelement
 */
 
-@property (nonatomic, retain) NSMutableArray *any;
+@property (nonatomic, strong) NSMutableArray *any;
 
 
 @end

@@ -33,7 +33,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	NSString *objectString;
 	if ([object isKindOfClass:[NSString class]])
 	{
-		objectString = (NSString *)[[object retain] autorelease];
+		objectString = (NSString *)object;
 	}
 	else if ([object respondsToSelector:@selector(descriptionWithLocale:indent:)])
 	{
@@ -68,7 +68,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	self = [super init];
 	if (self != nil)
 	{
-		[dictionary release]; [array release];	// Avoid Memory Leak.
+		 	// Avoid Memory Leak.
 		
 		///////
 		
@@ -86,8 +86,8 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	self = [super init];
 	if (self != nil)
 	{
-		dictionary = [anObject retain];
-		array = [anArray retain];
+		dictionary = anObject;
+		array = anArray;
 	}
 	return self;
 	
@@ -99,7 +99,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 - (id)initWithDictionary:(NSMutableDictionary*)anObject {
 	
 	// Init.
-	[self initWithCapacity:0];
+	if (!(self = [self initWithCapacity:0])) return nil;
 	
 	// Loop on all elements.
 	for (id key in anObject) {
@@ -118,7 +118,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 - (id)convertFromDictionary:(id)anObject {
 	
 	// Init.
-	[self initWithCapacity:0];					
+    [self initWithCapacity:0];
 	
 	// Loop on all elements.
 	for ( id key in anObject ) {
@@ -235,10 +235,10 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	if ( from > to ) return NO;
 	
 	// Duplicate the Array Index.
-	NSMutableArray *duplicated = [ [array copy] autorelease];
+	NSMutableArray *duplicated = [array copy];
 	
 	// Loop to remove this itens.
-	for( int counter_remove = from; counter_remove <= to; counter_remove++ )
+	for( NSUInteger counter_remove = from; counter_remove <= to; counter_remove++ )
 		
 		[self removeObjectForKey:[duplicated objectAtIndex:counter_remove] ]; 
 	
@@ -259,7 +259,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 
 //// //// //// //// //// //// //// //// //// //// //// ////// //// //// //// //// //// //// //// //// //// //// //
 
-- (int)indexOfKey:(id)aKey {
+- (NSUInteger)indexOfKey:(id)aKey {
 	
 	return [array indexOfObject:aKey ];
 	
@@ -350,7 +350,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 - (void)moveFromIndex:(NSUInteger)from To:(NSUInteger)to {
 	
 	// Duplicate the Array Index.
-	NSMutableArray *duplicated = [ [array copy] autorelease];
+	NSMutableArray *duplicated = [array copy];
 	
 	// Insert on new position.
 	[array insertObject:[duplicated objectAtIndex:from] atIndex:( to > from ? to+1 : to )];
@@ -379,18 +379,12 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 #pragma mark -
 //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
 #pragma mark Memory Management Methods. 
-- (void)dealloc
-{
-	[dictionary release];
-	[array release];
-	[super dealloc];
-}
 
 //// //// //// //// //// //// //// //// //// //// //// ////// //// //// //// //// //// //// //// //// //// //// //
 
 - (id)copyWithZone:(NSZone *)zone {
 	
-	return [[[self class] allocWithZone: zone] initWithObject:[[dictionary mutableCopy] autorelease] withArray:[[array mutableCopy] autorelease] ];
+	return [[[self class] allocWithZone: zone] initWithObject:[dictionary mutableCopy] withArray:[array mutableCopy] ];
 
 }
 

@@ -29,12 +29,12 @@
 /**
  A Pico bindable object constructed from the response data. If an error occurs while parsing, `nil` will be returned, and the `error` property will be set to the error.
  */
-@property (readonly, nonatomic, retain) id responseObj;
+@property (readonly, nonatomic, strong) id responseObj;
 
 /**
  Target Pico binding class
  */
-@property (readwrite, nonatomic, retain) Class responseClazz;
+@property (readwrite, nonatomic, strong) Class responseClazz;
 
 /**
  SOAP version
@@ -49,7 +49,7 @@
 /**
  Configurations like encoding, date/number formatter, etc
  */
-@property (readwrite, nonatomic, retain) PicoConfig *config;
+@property (readwrite, nonatomic, strong) PicoConfig *config;
 
 ///----------------------------------
 /// @name Creating Request Operations

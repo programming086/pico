@@ -13,8 +13,8 @@
     
 }
 
-@property (nonatomic, retain, readwrite) id key;
-@property (nonatomic, retain, readwrite) id object;
+@property (nonatomic, strong, readwrite) id key;
+@property (nonatomic, strong, readwrite) id object;
 
 
 -(id) initWithObject:(id)obj forKey:(id)key;

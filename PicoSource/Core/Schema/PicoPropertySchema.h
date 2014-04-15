@@ -11,21 +11,21 @@
 @interface PicoPropertySchema : NSObject {
     
     // property kind
-    NSString *_propertyKind;
+    NSString *__unsafe_unretained _propertyKind;
     // xml name
-    NSString *_xmlName;
+    NSString *__unsafe_unretained _xmlName;
     // property name
-    NSString *_propertyName;
+    NSString *__unsafe_unretained _propertyName;
     // property type
-    NSString *_propertyType;
+    NSString *__unsafe_unretained _propertyType;
     // class name of the type
     Class _clazz;
 }
 
-@property (nonatomic, assign) NSString *propertyKind;
-@property (nonatomic, assign) NSString *xmlName;
-@property (nonatomic, assign) NSString *propertyName;
-@property (nonatomic, assign) NSString *propertyType;
+@property (nonatomic, unsafe_unretained) NSString *propertyKind;
+@property (nonatomic, unsafe_unretained) NSString *xmlName;
+@property (nonatomic, unsafe_unretained) NSString *propertyName;
+@property (nonatomic, unsafe_unretained) NSString *propertyType;
 @property (nonatomic, assign) Class clazz;
 
 -(id)initWithKind: (NSString *)pKind xmlName: (NSString *)xName propertyName: (NSString *)proName type: (NSString *)pType clazz: (Class)clz;

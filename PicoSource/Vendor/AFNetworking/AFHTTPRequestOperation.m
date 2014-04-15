@@ -27,7 +27,7 @@ NSSet * AFContentTypesFromHTTPHeader(NSString *string) {
     static NSCharacterSet *_skippedCharacterSet = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _skippedCharacterSet = [[NSCharacterSet characterSetWithCharactersInString:@" ,"] retain];
+        _skippedCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@" ,"];
     });
     
     if (!string) {
@@ -92,9 +92,9 @@ static NSString * AFStringFromIndexSet(NSIndexSet *indexSet) {
 #pragma mark -
 
 @interface AFHTTPRequestOperation ()
-@property (readwrite, nonatomic, retain) NSURLRequest *request;
-@property (readwrite, nonatomic, retain) NSHTTPURLResponse *response;
-@property (readwrite, nonatomic, retain) NSError *HTTPError;
+@property (readwrite, nonatomic, strong) NSURLRequest *request;
+@property (readwrite, nonatomic, strong) NSHTTPURLResponse *response;
+@property (readwrite, nonatomic, strong) NSError *HTTPError;
 @property (assign) long long totalContentLength;
 @property (assign) long long offsetContentLength;
 @end
@@ -109,7 +109,6 @@ static NSString * AFStringFromIndexSet(NSIndexSet *indexSet) {
 @dynamic response;
 
 - (void)dealloc {
-    [_HTTPError release];
     
     if (_successCallbackQueue) { 
         dispatch_release(_successCallbackQueue);
@@ -121,7 +120,6 @@ static NSString * AFStringFromIndexSet(NSIndexSet *indexSet) {
         _failureCallbackQueue = NULL;
     }
 
-    [super dealloc];
 }
 
 - (NSError *)error {
@@ -136,12 +134,12 @@ static NSString * AFStringFromIndexSet(NSIndexSet *indexSet) {
             if (![self hasAcceptableStatusCode]) {
                 NSUInteger statusCode = ([self.response isKindOfClass:[NSHTTPURLResponse class]]) ? (NSUInteger)[self.response statusCode] : 200;
                 [userInfo setValue:[NSString stringWithFormat:NSLocalizedString(@"Expected status code in (%@), got %d", nil), AFStringFromIndexSet([[self class] acceptableStatusCodes]), statusCode] forKey:NSLocalizedDescriptionKey];
-                self.HTTPError = [[[NSError alloc] initWithDomain:AFNetworkingErrorDomain code:NSURLErrorBadServerResponse userInfo:userInfo] autorelease];
+                self.HTTPError = [[NSError alloc] initWithDomain:AFNetworkingErrorDomain code:NSURLErrorBadServerResponse userInfo:userInfo];
             } else if (![self hasAcceptableContentType]) {
                 // Don't invalidate content type if there is no content
                 if ([self.responseData length] > 0) {
                     [userInfo setValue:[NSString stringWithFormat:NSLocalizedString(@"Expected content type %@, got %@", nil), [[self class] acceptableContentTypes], [self.response MIMEType]] forKey:NSLocalizedDescriptionKey];
-                    self.HTTPError = [[[NSError alloc] initWithDomain:AFNetworkingErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:userInfo] autorelease];
+                    self.HTTPError = [[NSError alloc] initWithDomain:AFNetworkingErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:userInfo];
                 }
             }
         }
@@ -162,7 +160,7 @@ static NSString * AFStringFromIndexSet(NSIndexSet *indexSet) {
         offset = [[self.outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey] length];
     }
 
-    NSMutableURLRequest *mutableURLRequest = [[self.request mutableCopy] autorelease];
+    NSMutableURLRequest *mutableURLRequest = [self.request mutableCopy];
     if ([[self.response allHeaderFields] valueForKey:@"ETag"]) {
         [mutableURLRequest setValue:[[self.response allHeaderFields] valueForKey:@"ETag"] forHTTPHeaderField:@"If-Range"];
     }
@@ -260,7 +258,7 @@ static id AFStaticClassValueImplementation(id self, SEL _cmd) {
 }
 
 + (void)addAcceptableStatusCodes:(NSIndexSet *)statusCodes {
-    NSMutableIndexSet *mutableStatusCodes = [[[NSMutableIndexSet alloc] initWithIndexSet:[self acceptableStatusCodes]] autorelease];
+    NSMutableIndexSet *mutableStatusCodes = [[NSMutableIndexSet alloc] initWithIndexSet:[self acceptableStatusCodes]];
     [mutableStatusCodes addIndexes:statusCodes];
 	SEL selector = @selector(acceptableStatusCodes);
 	AFSwizzleClassMethodWithImplementation([self class], selector, (IMP)AFStaticClassValueImplementation);
@@ -272,7 +270,7 @@ static id AFStaticClassValueImplementation(id self, SEL _cmd) {
 }
 
 + (void)addAcceptableContentTypes:(NSSet *)contentTypes {
-    NSMutableSet *mutableContentTypes = [[[NSMutableSet alloc] initWithSet:[self acceptableContentTypes] copyItems:YES] autorelease];
+    NSMutableSet *mutableContentTypes = [[NSMutableSet alloc] initWithSet:[self acceptableContentTypes] copyItems:YES];
     [mutableContentTypes unionSet:contentTypes];
 	SEL selector = @selector(acceptableContentTypes);
 	AFSwizzleClassMethodWithImplementation([self class], selector, (IMP)AFStaticClassValueImplementation);

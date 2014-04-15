@@ -9,7 +9,7 @@
 @interface PicoXMLElement : NSObject {
 
 @private
-    PicoXMLElement *_parent; // nonretained
+    PicoXMLElement *__unsafe_unretained _parent; // nonretained
     NSString *_name; // element name
     NSString *_nsUri; // element namespace
     NSString *_value; // element text if any
@@ -17,11 +17,11 @@
     NSDictionary *_attributes; // attributes of the element
 }
 
-@property (nonatomic, assign) PicoXMLElement *parent;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *nsUri;
-@property (nonatomic, retain) NSString *value;
-@property (nonatomic, retain) NSMutableArray *children;
-@property (nonatomic, retain) NSDictionary *attributes;
+@property (nonatomic, unsafe_unretained) PicoXMLElement *parent;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *nsUri;
+@property (nonatomic, strong) NSString *value;
+@property (nonatomic, strong) NSMutableArray *children;
+@property (nonatomic, strong) NSDictionary *attributes;
 
 @end

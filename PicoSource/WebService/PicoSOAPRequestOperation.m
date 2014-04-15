@@ -23,8 +23,8 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
 }
 
 @interface PicoSOAPRequestOperation ()
-@property (readwrite, nonatomic, retain) NSError *PicoError;
-@property (readwrite, nonatomic, retain) id responseObj;
+@property (readwrite, nonatomic, strong) NSError *PicoError;
+@property (readwrite, nonatomic, strong) id responseObj;
 @end
 
 @implementation PicoSOAPRequestOperation
@@ -36,13 +36,6 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
 @synthesize debug = _debug;
 @synthesize config = _config;
 
--(void)dealloc {
-    [_responseObj release];
-    [_PicoError release];
-    [_responseClazz release];
-    [_config release];
-    [super dealloc];
-}
 
 -(id)responseObj {
     if (!_responseObj && [self isFinished] && [self.responseData length] > 0 && !self.PicoError) {
@@ -51,7 +44,6 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
             NSLog(@"Response message : ");
             NSString *message = [[NSString alloc] initWithData:self.responseData encoding:CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)self.config.encoding))];
             NSLog(@"%@", message);
-            [message release];
         }
         
         PicoSOAPReader *soapReader = nil;
@@ -80,7 +72,7 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
             }
             
         } @finally {
-            [soapReader release];
+            soapReader = nil;
         }
     }
     
@@ -121,7 +113,7 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
         } else {
             if (self.debug) {
                 if (self.response) {
-                    NSLog(@"Response HTTP status : \n%u", [self.response statusCode]);
+                    NSLog(@"Response HTTP status : \n%ld", (long)[self.response statusCode]);
                     NSLog(@"Response HTTP headers : \n%@", [self.response allHeaderFields]);
                 }
             }

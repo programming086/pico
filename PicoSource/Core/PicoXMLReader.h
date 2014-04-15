@@ -17,7 +17,7 @@
     
 }
 
-@property (nonatomic, retain) PicoConfig *config;
+@property (nonatomic, strong) PicoConfig *config;
 
 - (id) initWithConfig:(PicoConfig *)config;
 

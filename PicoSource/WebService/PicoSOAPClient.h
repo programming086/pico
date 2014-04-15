@@ -16,7 +16,7 @@
 /**
  Target endpoint url, mandatory
  */
-@property (readonly, nonatomic, retain) NSURL *endpointURL;
+@property (readonly, nonatomic, strong) NSURL *endpointURL;
 
 /**
  SOAP version used, default to SOAP11
@@ -32,19 +32,19 @@
  Configurations like encoding, date/number formatter, etc.
  Defaults will be used if not set explicitly.
  */
-@property (readwrite, nonatomic, retain) PicoConfig *config;
+@property (readwrite, nonatomic, strong) PicoConfig *config;
 
 /**
  Custom soap headers, following types are acceptable in the array:
  1. class conforms to `PicoBindable` protocol
  2. `PicoXMLElement` class
  */
-@property (readwrite, nonatomic, retain) NSMutableArray *customSoapHeaders;
+@property (readwrite, nonatomic, strong) NSMutableArray *customSoapHeaders;
 
 /**
  Additional parameters that will be appended as query string at the end of the request url
  */
-@property (readwrite, nonatomic, retain) NSMutableDictionary *additionalParameters;
+@property (readwrite, nonatomic, strong) NSMutableDictionary *additionalParameters;
 
 /**
  HTTP request timeout settting

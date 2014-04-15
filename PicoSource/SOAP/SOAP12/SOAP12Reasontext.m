@@ -23,20 +23,13 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_VALUE xmlName:nil propertyName:@"value" type:PICO_TYPE_STRING clazz:nil];
     [map setObject:ps forKey:@"value"];
-    [ps release];
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ATTRIBUTE xmlName:@"lang" propertyName:@"lang" type:PICO_TYPE_STRING clazz:nil];
     [map setObject:ps forKey:@"lang"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.value = nil;
-    self.lang = nil;
-    [super dealloc];
-}
 
 @end

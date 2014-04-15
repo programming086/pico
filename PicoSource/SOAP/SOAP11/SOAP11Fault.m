@@ -16,7 +16,6 @@
 // note: this method is only for internal use, DO NOT CHANGE!
 +(PicoClassSchema *)getClassMetaData {
     PicoClassSchema *cs = [[PicoClassSchema alloc] initWithXmlName:@"Fault" nsUri:@"http://schemas.xmlsoap.org/soap/envelope/"];
-    [cs autorelease];
     return cs;
 }
 
@@ -28,28 +27,17 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"faultcode" propertyName:@"faultcode" type:PICO_TYPE_QNAME clazz:nil];
     [map setObject:ps forKey:@"faultcode"];
-    [ps release];
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"faultstring" propertyName:@"faultstring" type:PICO_TYPE_STRING clazz:nil];
     [map setObject:ps forKey:@"faultstring"];
-    [ps release];
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"faultactor" propertyName:@"faultactor" type:PICO_TYPE_STRING clazz:nil];
     [map setObject:ps forKey:@"faultactor"];
-    [ps release];
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"detail" propertyName:@"detail" type:PICO_TYPE_OBJECT clazz:[SOAP11Detail class]];
     [map setObject:ps forKey:@"detail"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.faultcode = nil;
-    self.faultstring = nil;
-    self.faultactor = nil;
-    self.detail = nil;
-    [super dealloc];
-}
 
 @end

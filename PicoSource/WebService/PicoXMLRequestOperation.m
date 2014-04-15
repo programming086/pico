@@ -19,8 +19,8 @@ static dispatch_queue_t xml_request_operation_processing_queue() {
 }
 
 @interface PicoXMLRequestOperation ()
-@property (readwrite, nonatomic, retain) NSError *PicoError;
-@property (readwrite, nonatomic, retain) id responseObj;
+@property (readwrite, nonatomic, strong) NSError *PicoError;
+@property (readwrite, nonatomic, strong) id responseObj;
 @end
 
 @implementation PicoXMLRequestOperation
@@ -31,13 +31,6 @@ static dispatch_queue_t xml_request_operation_processing_queue() {
 @synthesize debug = _debug;
 @synthesize config = _config;
 
--(void)dealloc {
-    [_responseObj release];
-    [_PicoError release];
-    [_responseClazz release];
-    [_config release];
-    [super dealloc];
-}
 
 -(id)responseObj {
     if (!_responseObj && [self isFinished] && [self.responseData length] > 0 && !self.PicoError) {
@@ -46,7 +39,6 @@ static dispatch_queue_t xml_request_operation_processing_queue() {
             NSLog(@"Response message : ");
             NSString *message = [[NSString alloc] initWithData:self.responseData encoding:CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)self.config.encoding))];
             NSLog(@"%@", message);
-            [message release];
         }
         
         PicoXMLReader *xmlReader = nil;
@@ -65,7 +57,7 @@ static dispatch_queue_t xml_request_operation_processing_queue() {
             }
             
         } @finally {
-            [xmlReader release];
+            xmlReader = nil;
         }
     }
     

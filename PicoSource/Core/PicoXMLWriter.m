@@ -22,7 +22,7 @@
 @synthesize config = _config;
 
 - (id)init {
-    return [self initWithConfig:[[[PicoConfig alloc] init] autorelease]];
+    return [self initWithConfig:[[PicoConfig alloc] init]];
 }
 
 - (id)initWithConfig:(PicoConfig *)config {
@@ -36,11 +36,10 @@
 
 -(NSData *)toData:(id)obj {
     
-    NSString *xmlString = [[self toString:obj] retain];
+    NSString *xmlString = [self toString:obj];
     
     NSData *data = [xmlString dataUsingEncoding: CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)self.config.encoding)) allowLossyConversion:NO];
     
-    [xmlString release];
     
     return data;
     
@@ -82,7 +81,6 @@
     NSString *xmlString = [xmlWriter toString];
     xmlString = [NSMutableString stringWithString:xmlString];
     
-    [xmlWriter release];
     
     return xmlString;
     
@@ -209,7 +207,6 @@
 
 
 -(void)writeElements:(XMLWriter *)xmlWriter source:(id)source schema:(PicoBindingSchema *)bindingSchema namespace:(NSString *)nsURI  {
-#warning неверный порядок property!!!!!, хотя при создании все верно
     NSDictionary *map = bindingSchema.property2ElementSchemaMapping;
     if (map.count > 0) {
         for(NSString *propertyName in map) {
@@ -256,9 +253,5 @@
 
 
 
--(void) dealloc {
-    self.config = nil;
-    [super dealloc];
-}
 
 @end

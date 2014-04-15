@@ -12,7 +12,6 @@
 // note: this method is only for internal use, DO NOT CHANGE!
 +(PicoClassSchema *)getClassMetaData {
     PicoClassSchema *cs = [[PicoClassSchema alloc] initWithXmlName:@"NotUnderstood" nsUri:@"http://www.w3.org/2003/05/soap-envelope"];
-    [cs autorelease];
     return cs;
 }
 
@@ -24,16 +23,11 @@
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ATTRIBUTE xmlName:@"qname" propertyName:@"qname" type:PICO_TYPE_QNAME clazz:nil];
     [map setObject:ps forKey:@"qname"];
-    [ps release];
     
     return map;
 }
 
 
 
--(void)dealloc {
-    self.qname = nil;
-    [super dealloc];
-}
 
 @end

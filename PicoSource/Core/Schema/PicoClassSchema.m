@@ -25,7 +25,6 @@
 -(void) dealloc {
     self.xmlName = nil;
     self.nsURI = nil;
-    [super dealloc];
 }
 
 @end

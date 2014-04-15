@@ -35,7 +35,6 @@
 	self.propertyName = nil;
 	self.propertyType= nil;
 	self.clazz = nil;
-	[super dealloc];
 }
 
 @end

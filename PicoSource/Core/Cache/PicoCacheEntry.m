@@ -26,10 +26,5 @@
     return self;
 }
 
--(void) dealloc {
-    self.key = nil;
-    self.object = nil;
-    [super dealloc];
-}
 
 @end

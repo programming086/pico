@@ -32,28 +32,28 @@
  
  type : NSString, wrapper for primitive qname
 */
-@property (nonatomic, retain) NSString *faultcode;
+@property (nonatomic, strong) NSString *faultcode;
 
 /**
  (public property)
  
  type : NSString, wrapper for primitive string
 */
-@property (nonatomic, retain) NSString *faultstring;
+@property (nonatomic, strong) NSString *faultstring;
 
 /**
  (public property)
  
  type : NSString, wrapper for primitive string
 */
-@property (nonatomic, retain) NSString *faultactor;
+@property (nonatomic, strong) NSString *faultactor;
 
 /**
  (public property)
  
  type : class SOAP11Detail
 */
-@property (nonatomic, retain) SOAP11Detail *detail;
+@property (nonatomic, strong) SOAP11Detail *detail;
 
 
 @end

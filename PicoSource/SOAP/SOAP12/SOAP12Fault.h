@@ -35,35 +35,35 @@
  
  type : class SOAP12Faultcode
 */
-@property (nonatomic, retain) SOAP12Faultcode *code;
+@property (nonatomic, strong) SOAP12Faultcode *code;
 
 /**
  (public property)
  
  type : class SOAP12Faultreason
 */
-@property (nonatomic, retain) SOAP12Faultreason *reason;
+@property (nonatomic, strong) SOAP12Faultreason *reason;
 
 /**
  (public property)
  
  type : NSString, wrapper for primitive string
 */
-@property (nonatomic, retain) NSString *node;
+@property (nonatomic, strong) NSString *node;
 
 /**
  (public property)
  
  type : NSString, wrapper for primitive string
 */
-@property (nonatomic, retain) NSString *role;
+@property (nonatomic, strong) NSString *role;
 
 /**
  (public property)
  
  type : class SOAP12Detail
 */
-@property (nonatomic, retain) SOAP12Detail *detail;
+@property (nonatomic, strong) SOAP12Detail *detail;
 
 
 @end

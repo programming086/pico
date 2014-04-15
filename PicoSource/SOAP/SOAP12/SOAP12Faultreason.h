@@ -28,7 +28,7 @@
  entry type : class SOAP12Reasontext
 */
 
-@property (nonatomic, retain) NSMutableArray *text;
+@property (nonatomic, strong) NSMutableArray *text;
 
 
 @end

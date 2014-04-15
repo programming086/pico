@@ -15,7 +15,7 @@ enum {
 
 @interface PicoXMLClient ()
 
-@property (readwrite, nonatomic, retain) NSURL *endpointURL;
+@property (readwrite, nonatomic, strong) NSURL *endpointURL;
 
 @end
 
@@ -120,7 +120,7 @@ enum {
     }
     NSMutableURLRequest *request = [super requestWithMethod:method path:url parameters:nil];
     
-    PicoXMLWriter *xmlWriter = [[[PicoXMLWriter alloc] initWithConfig:self.config] autorelease];
+    PicoXMLWriter *xmlWriter = [[PicoXMLWriter alloc] initWithConfig:self.config];
     // marshall to xml message
     NSData *xmlData = [xmlWriter toData:requestObject];
     
@@ -130,7 +130,6 @@ enum {
         NSLog(@"Request message:");
         NSString *message = [[NSString alloc] initWithData:xmlData encoding:CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)self.config.encoding))];
         NSLog(@"%@", message);
-        [message release];
     }
     
     request.HTTPBody = xmlData;
@@ -139,10 +138,4 @@ enum {
 }
 
 
-- (void)dealloc {
-    self.endpointURL = nil;
-    self.config = nil;
-    self.additionalParameters = nil;
-    [super dealloc];
-}
 @end

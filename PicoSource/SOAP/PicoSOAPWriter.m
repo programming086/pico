@@ -74,7 +74,6 @@ static NSString *XSD_NAMESPACE = @"http://www.w3.org/2001/XMLSchema";
     NSString *xmlString = [xmlWriter toString];
     xmlString = [NSMutableString stringWithString:xmlString];
     
-    [xmlWriter release];
     
     return xmlString;
     
@@ -106,11 +105,10 @@ static NSString *XSD_NAMESPACE = @"http://www.w3.org/2001/XMLSchema";
 
 -(NSData *)toData:(id)obj {
     
-    NSString *xmlString = [[self toString:obj] retain];
+    NSString *xmlString = [self toString:obj];
     
     NSData *data = [xmlString dataUsingEncoding: CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)self.config.encoding)) allowLossyConversion:NO];
     
-    [xmlString release];
     
     return data;
     
