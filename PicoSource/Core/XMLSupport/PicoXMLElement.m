@@ -23,7 +23,7 @@
 	[s appendFormat:@"%@<%@", indent, _name];
 	
 	for (NSString *attribute in _attributes)
-		[s appendFormat:@" %@=\"%@\"", attribute, [_attributes objectForKey:attribute]];
+		[s appendFormat:@" %@=\"%@\"", attribute, _attributes[attribute]];
     
 	NSString *trimVal = [_value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     

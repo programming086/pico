@@ -53,12 +53,12 @@ static dispatch_queue_t soap_request_operation_processing_queue() {
             if (self.soapVersion == SOAP11) {
                 SOAP11Envelope *soap11Envelope = [soapReader fromData:self.responseData withSOAPClass:[SOAP11Envelope class] innerClass:self.responseClazz];
                 if (soap11Envelope && soap11Envelope.body && soap11Envelope.body.any.count > 0) {
-                    self.responseObj = [soap11Envelope.body.any objectAtIndex:0];
+                    self.responseObj = (soap11Envelope.body.any)[0];
                 }
             } else {
                 SOAP12Envelope *soap12Envelope = [soapReader fromData:self.responseData withSOAPClass:[SOAP12Envelope class] innerClass:self.responseClazz];
                 if (soap12Envelope && soap12Envelope.body && soap12Envelope.body.any.count > 0) {
-                    self.responseObj = [soap12Envelope.body.any objectAtIndex:0];
+                    self.responseObj = (soap12Envelope.body.any)[0];
                 }
             }
         } @catch (NSException *ex) {

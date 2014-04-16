@@ -112,7 +112,7 @@
     NSDictionary *map = bindingSchema.property2AttributeSchemaMapping;
     if (map.count > 0) {
         for(NSString *propertyName in map) {
-            PicoPropertySchema *ps = [map objectForKey:propertyName];
+            PicoPropertySchema *ps = map[propertyName];
             id propertyValue = [source valueForKey:propertyName];
             if (propertyValue) {
                 NSString *xmlString = [PicoConverter write:propertyValue withType:ps.propertyType config:self.config];
@@ -210,7 +210,7 @@
     NSDictionary *map = bindingSchema.property2ElementSchemaMapping;
     if (map.count > 0) {
         for(NSString *propertyName in map) {
-            PicoPropertySchema *ps = [map objectForKey:propertyName];
+            PicoPropertySchema *ps = map[propertyName];
             id propertyValue = [source valueForKey:propertyName];
             if (propertyValue) {
                 if ([ps.propertyKind isEqualToString:PICO_KIND_ELEMENT]) {

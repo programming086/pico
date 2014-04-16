@@ -86,7 +86,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		automaticEmptyElements = YES;
 		
 		// setup default xml namespaces. assume both are previously known.
-		[namespaceCounts addObject:[NSNumber numberWithInt:2]];
+		[namespaceCounts addObject:@2];
 		[self setPrefix:XML_NAMESPACE_URI_PREFIX namespaceURI:XML_NAMESPACE_URI];
 		[self setPrefix:XMLNS_NAMESPACE_URI_PREFIX namespaceURI:XMLNS_NAMESPACE_URI];
 	}
@@ -101,7 +101,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		[namespaceCounts addObject:previousCount];
 	} else {
 		// the count has changed, save the it
-		NSNumber* count = [NSNumber numberWithUnsignedInteger:[namespaceURIs count]];
+		NSNumber* count = @([namespaceURIs count]);
         
 		[namespaceCounts addObject:count];
 	}
@@ -114,15 +114,15 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		for(int i = [previousCount intValue]; i < [namespaceURIs count]; i++) {
 			
 			// did we already write this namespace?
-			id written = [namespaceWritten objectAtIndex:i];
+			id written = namespaceWritten[i];
 			if(written == NSBOOL(NO)) {
 				// write namespace
-				NSString* namespaceURI = [namespaceURIs objectAtIndex:i];
-				NSString* prefix = [namespaceURIPrefixMap objectForKey:namespaceURI];
+				NSString* namespaceURI = namespaceURIs[i];
+				NSString* prefix = namespaceURIPrefixMap[namespaceURI];
 				
 				[self writeNamespaceToStream:prefix namespaceURI:namespaceURI];
 				
-				[namespaceWritten replaceObjectAtIndex:i withObject:NSBOOL(YES)];
+				namespaceWritten[i] = NSBOOL(YES);
 			} else {
 				// already written namespace
 			}
@@ -134,13 +134,13 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 
 - (void) popNamespaceStack {
 	// step namespaces one level down
-	if([namespaceCounts lastObject] != [namespaceCounts objectAtIndex:([namespaceCounts count] - 2)]) {
+	if([namespaceCounts lastObject] != namespaceCounts[([namespaceCounts count] - 2)]) {
 		// remove namespaces which now are out of scope, i.e. between the current and the previus count
 		NSNumber* previousCount = [namespaceCounts lastObject];
-		NSNumber* currentCount = [namespaceCounts objectAtIndex:([namespaceCounts count] - 2)];
+		NSNumber* currentCount = namespaceCounts[([namespaceCounts count] - 2)];
 		for(int i = [previousCount intValue] - 1; i >= [currentCount intValue]; i--) {
-			NSString* removedNamespaceURI = [namespaceURIs objectAtIndex:i];
-			NSString* removedPrefix = [namespaceURIPrefixMap objectForKey:removedNamespaceURI];
+			NSString* removedNamespaceURI = namespaceURIs[i];
+			NSString* removedPrefix = namespaceURIPrefixMap[removedNamespaceURI];
 			
 			[prefixNamespaceURIMap removeObjectForKey:removedPrefix];
 			[namespaceURIPrefixMap removeObjectForKey:removedNamespaceURI];
@@ -164,11 +164,11 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		// raise exception
 		@throw([NSException exceptionWithName:@"XMLWriterException" reason:@"Prefix cannot be NULL" userInfo:NULL]);
 	}
-	if([namespaceURIPrefixMap objectForKey:namespaceURI]) {
+	if(namespaceURIPrefixMap[namespaceURI]) {
 		// raise exception
 		@throw([NSException exceptionWithName:@"XMLWriterException" reason:[NSString stringWithFormat:@"Name namespace %@ has already been set", namespaceURI] userInfo:NULL]);
 	}
-	if([prefixNamespaceURIMap objectForKey:prefix]) {
+	if(prefixNamespaceURIMap[prefix]) {
 		// raise exception
 		if([prefix length]) {
 			@throw([NSException exceptionWithName:@"XMLWriterException" reason:[NSString stringWithFormat:@"Prefix %@ has already been set", prefix] userInfo:NULL]);
@@ -179,8 +179,8 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	
 	// increase the namespaces and add prefix mapping
 	[namespaceURIs addObject:namespaceURI];
-	[namespaceURIPrefixMap setObject:prefix forKey:namespaceURI];
-	[prefixNamespaceURIMap setObject:namespaceURI forKey:prefix];
+	namespaceURIPrefixMap[namespaceURI] = prefix;
+	prefixNamespaceURIMap[prefix] = namespaceURI;
 	
 	if(openElement) { // write the namespace now
 		[self writeNamespaceToStream:prefix namespaceURI:namespaceURI];
@@ -193,7 +193,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 }
 
 - (NSString*)getPrefix:(NSString*)namespaceURI {
-	return [namespaceURIPrefixMap objectForKey:namespaceURI];
+	return namespaceURIPrefixMap[namespaceURI];
 }
 
 - (void) pushElementStack:(NSString*)namespaceURI localName:(NSString*)localName {
@@ -316,7 +316,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	
 	[self write:@"<"];
 	if(namespaceURI) {
-		NSString* prefix = [namespaceURIPrefixMap objectForKey:namespaceURI];
+		NSString* prefix = namespaceURIPrefixMap[namespaceURI];
 		
 		if(!prefix) {
 			// raise exception
@@ -365,7 +365,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	[self write:@"</"];
 	
 	if(namespaceURI) {
-		NSString* prefix = [namespaceURIPrefixMap objectForKey:namespaceURI];
+		NSString* prefix = namespaceURIPrefixMap[namespaceURI];
 		
 		if(!prefix) {
 			// raise exception
@@ -415,7 +415,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	[self write:@"<"];
 	
 	if(namespaceURI) {
-		NSString* prefix = [namespaceURIPrefixMap objectForKey:namespaceURI];
+		NSString* prefix = namespaceURIPrefixMap[namespaceURI];
 		
 		if(!prefix) {
 			// raise exception
@@ -444,7 +444,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		[self write:@" "];
 		
 		if(namespaceURI) {
-			NSString* prefix = [namespaceURIPrefixMap objectForKey:namespaceURI];
+			NSString* prefix = namespaceURIPrefixMap[namespaceURI];
 			if(!prefix) {
 				// raise exception
 				@throw([NSException exceptionWithName:@"XMLWriterException" reason:[NSString stringWithFormat:@"Unknown namespace URI %@", namespaceURI] userInfo:NULL]);
@@ -485,7 +485,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 }
 
 - (NSString*)getNamespaceURI:(NSString*)prefix {
-	return [prefixNamespaceURIMap objectForKey:prefix];
+	return prefixNamespaceURIMap[prefix];
 }
 
 -(void) writeNamespaceToStream:(NSString*)prefix namespaceURI:(NSString*)namespaceURI {

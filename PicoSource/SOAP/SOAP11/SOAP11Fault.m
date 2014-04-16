@@ -26,13 +26,13 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"faultcode" propertyName:@"faultcode" type:PICO_TYPE_QNAME clazz:nil];
-    [map setObject:ps forKey:@"faultcode"];
+    map[@"faultcode"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"faultstring" propertyName:@"faultstring" type:PICO_TYPE_STRING clazz:nil];
-    [map setObject:ps forKey:@"faultstring"];
+    map[@"faultstring"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"faultactor" propertyName:@"faultactor" type:PICO_TYPE_STRING clazz:nil];
-    [map setObject:ps forKey:@"faultactor"];
+    map[@"faultactor"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"detail" propertyName:@"detail" type:PICO_TYPE_OBJECT clazz:[SOAP11Detail class]];
-    [map setObject:ps forKey:@"detail"];
+    map[@"detail"] = ps;
     
     return map;
 }

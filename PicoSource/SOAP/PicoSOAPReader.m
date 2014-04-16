@@ -78,7 +78,7 @@ static NSString *INNER_CLASS_KEY = @"innerClass";
 	}
     
     NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
-    [threadDictionary setObject:innerClazz forKey:INNER_CLASS_KEY];
+    threadDictionary[INNER_CLASS_KEY] = innerClazz;
     
     id obj = [soapClazz new];
     
@@ -99,7 +99,7 @@ static NSString *INNER_CLASS_KEY = @"innerClass";
     
     if (soap11 || soap12) {
         NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
-        Class innerClazz = [threadDictionary objectForKey:INNER_CLASS_KEY];
+        Class innerClazz = threadDictionary[INNER_CLASS_KEY];
         
         BOOL success = [super readAnyElement:value element:element bindClass:innerClazz];
         if (!success) {

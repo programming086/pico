@@ -362,7 +362,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
   }
 
   // allocate a new NSString for this xmlChar*
-  result = [NSString stringWithUTF8String:(const char *) chars];
+  result = @((const char *) chars);
   if (cacheDict) {
     // save the string in the document's string cache
     CFDictionarySetValue(cacheDict, chars, (__bridge const void *)(result));
@@ -643,7 +643,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
 
   if ([children count] > index) {
 
-    return [children objectAtIndex:index];
+    return children[index];
   }
   return nil;
 }
@@ -726,7 +726,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
       if (namespaces) {
         // the dictionary keys are prefixes; the values are URIs
         for (NSString *prefix in namespaces) {
-          NSString *uri = [namespaces objectForKey:prefix];
+          NSString *uri = namespaces[prefix];
 
           xmlChar *prefixChars = (xmlChar *) [prefix UTF8String];
           xmlChar *uriChars = (xmlChar *) [uri UTF8String];
@@ -800,9 +800,8 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
         const char *msg = xpathCtx->lastError.str1;
         errorCode = xpathCtx->lastError.code;
         if (msg) {
-          NSString *errStr = [NSString stringWithUTF8String:msg];
-          errorInfo = [NSDictionary dictionaryWithObject:errStr
-                                                  forKey:@"error"];
+          NSString *errStr = @(msg);
+          errorInfo = @{@"error": errStr};
         }
       }
 
@@ -810,8 +809,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
     }
   } else {
     // not a valid node for using XPath
-    errorInfo = [NSDictionary dictionaryWithObject:@"invalid node"
-                                            forKey:@"error"];
+    errorInfo = @{@"error": @"invalid node"};
   }
 
   if (array == nil && error != nil) {
@@ -1484,8 +1482,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
 
         // store a mapping from this defined nsPtr to the one found higher
         // in the tree
-        [nsMap setObject:[NSValue valueWithPointer:foundNS]
-                  forKey:[NSValue valueWithPointer:definedNS]];
+        nsMap[[NSValue valueWithPointer:definedNS]] = [NSValue valueWithPointer:foundNS];
 
         // remove this namespace from the ns definition list of this node;
         // all child elements and attributes referencing this namespace
@@ -1511,7 +1508,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
   if (nodeToFix->ns != NULL) {
 
     NSValue *currNS = [NSValue valueWithPointer:nodeToFix->ns];
-    NSValue *replacementNS = [nsMap objectForKey:currNS];
+    NSValue *replacementNS = nsMap[currNS];
 
     if (replacementNS != nil) {
       xmlNsPtr replaceNSPtr = (xmlNsPtr)[replacementNS pointerValue];

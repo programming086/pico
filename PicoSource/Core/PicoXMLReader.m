@@ -86,7 +86,7 @@
     NSDictionary *attrMap = bs.xml2AttributeSchemaMapping;
     if(attrMap.count > 0) {
         for(NSString *xmlName in attrMap) {
-            PicoPropertySchema *ps = [attrMap objectForKey:xmlName];
+            PicoPropertySchema *ps = attrMap[xmlName];
             GDataXMLNode *attrNode = [element attributeForName:xmlName];
             if (attrNode) {
                 NSString *attrValue = [attrNode stringValue];
@@ -127,7 +127,7 @@
     NSDictionary *elementMap = bs.xml2ElementSchemaMapping;
     if (elementMap.count > 0) {
         for(NSString *xmlName in elementMap) {
-            PicoPropertySchema *ps = [elementMap objectForKey:xmlName];
+            PicoPropertySchema *ps = elementMap[xmlName];
             NSMutableArray *childElements = [[NSMutableArray alloc] init];
             NSArray *children = [element children];
             for(GDataXMLNode *node in children) {
@@ -138,7 +138,7 @@
             
             if (childElements.count > 0) {
                 if ([ps.propertyKind isEqualToString:PICO_KIND_ELEMENT]) {
-                    GDataXMLElement *childElement = [childElements objectAtIndex:0];
+                    GDataXMLElement *childElement = childElements[0];
                     // primitive
                     if ([PicoConverter isPrimitive:ps.propertyType]) {
                         NSString *xmlValue = [childElement stringValue];
@@ -193,7 +193,7 @@
             
             for(GDataXMLNode *node in children) {
                 if ([node kind] == GDataXMLElementKind) {
-                    if (elementMap.count == 0 || ![elementMap objectForKey:[node localName]]) {
+                    if (elementMap.count == 0 || !elementMap[[node localName]]) {
                         PicoXMLElement *picoElement = [self convertToPicoElement:(GDataXMLElement *)node];
                         [anyChildElements addObject:picoElement];
                     }
@@ -244,7 +244,7 @@
     picoElement.name = element.localName;
     picoElement.nsUri = element.URI;
     if ([element childCount] == 1) {
-        GDataXMLNode *node = [element.children objectAtIndex:0];
+        GDataXMLNode *node = (element.children)[0];
         if (node.kind == GDataXMLTextKind) {
             picoElement.value = node.stringValue;
         }
@@ -253,7 +253,7 @@
         NSMutableDictionary *attrDic = [[NSMutableDictionary alloc] init];
         picoElement.attributes = attrDic;
         for(GDataXMLNode *attr in element.attributes) {
-            [attrDic setObject:attr.stringValue forKey:attr.localName];
+            attrDic[attr.localName] = attr.stringValue;
         }
     }
     if (element.children) {

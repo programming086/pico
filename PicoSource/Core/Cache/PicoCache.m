@@ -51,7 +51,7 @@
     
     @synchronized(self) {
         // Look for the cache entry with the given key
-        PicoCacheEntry *entry = [_entries objectForKey:key];
+        PicoCacheEntry *entry = _entries[key];
         if (!entry) {
             return nil;
         }
@@ -70,7 +70,7 @@
     }
     
     @synchronized(self) {
-        PicoCacheEntry *entry = [_entries objectForKey:key];
+        PicoCacheEntry *entry = _entries[key];
         if (entry) {
             // Object exists in cache, refresh by removing it from the list
             [_entriesByTime removeObjectIdenticalTo:entry];
@@ -81,7 +81,7 @@
         entry = [[PicoCacheEntry alloc] initWithObject:object forKey:key];
         
         // Add the entry to the cache and put it at the end of the LRU list
-        [_entries setObject:entry forKey:key];
+        _entries[key] = entry;
         [_entriesByTime addObject:entry];
         
         
@@ -104,7 +104,7 @@
 }
 
 - (void)removeObjectForKey:(id)key {
-    PicoCacheEntry *entry = [_entries objectForKey:key];
+    PicoCacheEntry *entry = _entries[key];
     if (entry) {
         [_entries removeObjectForKey:key];
         [_entriesByTime removeObjectIdenticalTo:entry];
@@ -132,7 +132,7 @@
     
     // Remove oldest entries that exceed the count limit
     for(NSUInteger i = count; i > _countLimit; i--) {
-        PicoCacheEntry *entry = [_entriesByTime objectAtIndex:0];
+        PicoCacheEntry *entry = _entriesByTime[0];
         [_entries removeObjectForKey:[entry key]];
         [_entriesByTime removeObjectAtIndex:0];
     }

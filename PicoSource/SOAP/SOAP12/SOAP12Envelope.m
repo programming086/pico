@@ -25,9 +25,9 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Header" propertyName:@"header" type:PICO_TYPE_OBJECT clazz:[SOAP12Header class]];
-    [map setObject:ps forKey:@"header"];
+    map[@"header"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Body" propertyName:@"body" type:PICO_TYPE_OBJECT clazz:[SOAP12Body class]];
-    [map setObject:ps forKey:@"body"];
+    map[@"body"] = ps;
     
     return map;
 }

@@ -89,15 +89,15 @@ static const int CACHE_SIZE = 100;
     if (!map) return;
     
 	for (NSString *propertyName in map) {
-		PicoPropertySchema *ps = [map objectForKey:propertyName];
+		PicoPropertySchema *ps = map[propertyName];
 		
 		if ([[ps propertyKind] isEqualToString:PICO_KIND_ATTRIBUTE]) {
-			[_property2AttributeSchemaMapping setObject:ps forKey:propertyName];
-			[_xml2AttributeSchemaMapping setObject:ps forKey:[ps xmlName]];
+			_property2AttributeSchemaMapping[propertyName] = ps;
+			_xml2AttributeSchemaMapping[[ps xmlName]] = ps;
 		} else if ([[ps propertyKind] isEqualToString:PICO_KIND_ELEMENT] ||
 				   [[ps propertyKind] isEqualToString:PICO_KIND_ELEMENT_ARRAY]) {
-			[_property2ElementSchemaMapping setObject:ps forKey:propertyName];
-			[_xml2ElementSchemaMapping setObject:ps forKey:[ps xmlName]];
+			_property2ElementSchemaMapping[propertyName] = ps;
+			_xml2ElementSchemaMapping[[ps xmlName]] = ps;
 		} else if ([[ps propertyKind] isEqualToString:PICO_KIND_VALUE]) {
 			_valueSchema = ps;
 		} else if ([[ps propertyKind] isEqualToString:PICO_KIND_ANY_ELEMENT]) {

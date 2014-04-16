@@ -105,7 +105,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	for (id key in anObject) {
 		
 		// Use setObject to insert every element. 
-		[self setObject:[anObject objectForKey:key] forKey:key ];
+		self[key] = anObject[key];
 
 	}
 
@@ -126,23 +126,23 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 		//// //// //// //// //// //// //// //// //// //// //// //
 		
 		// Test if this element are one class of Dictionary.
-		if ( [ [anObject objectForKey:key] isMemberOfClass: NSClassFromString( @"NSDictionary" ) ] ||
-		   	 [ [anObject objectForKey:key] isMemberOfClass: NSClassFromString( @"NSMutableDictionary" ) ] ||
-			 [ [anObject objectForKey:key] isMemberOfClass: NSClassFromString( @"NSCFDictionary" ) ] ) {
+		if ( [ anObject[key] isMemberOfClass: NSClassFromString( @"NSDictionary" ) ] ||
+		   	 [ anObject[key] isMemberOfClass: NSClassFromString( @"NSMutableDictionary" ) ] ||
+			 [ anObject[key] isMemberOfClass: NSClassFromString( @"NSCFDictionary" ) ] ) {
 			
 			// Call this same method to convert this class of Dictionary.
-			OrderedDictionary *convertedObject = [[OrderedDictionary alloc] convertFromDictionary:[anObject objectForKey:key] ]; 
+			OrderedDictionary *convertedObject = [[OrderedDictionary alloc] convertFromDictionary:anObject[key] ]; 
 			
 			//// //// //// //// //// //// //// //// //// //// //// //
 			
 			// Use setObject to set this converted element.
-			[self setObject:convertedObject forKey:key ];
+			self[key] = convertedObject;
 			
 		// If not, just add on the new Dictionary.
 		} else {
 			
 			// Use setObject to set this object. 
-			[self setObject:[anObject objectForKey:key] forKey:key ]; 
+			self[key] = anObject[key]; 
 		}
 	}
 	
@@ -171,23 +171,23 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 - (void)setObject:(id)anObject forKey:(id)aKey
 {
 	// Check for duplicated key.
-	if (![dictionary objectForKey:aKey])
+	if (!dictionary[aKey])
 	{
 		[array addObject:aKey];
 	}
-	[dictionary setObject:anObject forKey:aKey];
+	dictionary[aKey] = anObject;
 }
 
 //// //// //// //// //// //// //// //// //// //// //// ////// //// //// //// //// //// //// //// //// //// //// //
 
 - (void)insertObject:(id)anObject forKey:(id)aKey atIndex:(NSUInteger)anIndex
 {
-	if (![dictionary objectForKey:aKey])
+	if (!dictionary[aKey])
 	{
 		[self removeObjectForKey:aKey];
 	}
 	[array insertObject:aKey atIndex:anIndex];
-	[dictionary setObject:anObject forKey:aKey];
+	dictionary[aKey] = anObject;
 }
 
 //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// 
@@ -240,7 +240,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	// Loop to remove this itens.
 	for( NSUInteger counter_remove = from; counter_remove <= to; counter_remove++ )
 		
-		[self removeObjectForKey:[duplicated objectAtIndex:counter_remove] ]; 
+		[self removeObjectForKey:duplicated[counter_remove] ]; 
 	
 	// Everything ok.
 	return YES;
@@ -254,7 +254,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 
 - (id)keyAtIndex:(NSUInteger)anIndex
 {
-	return [array objectAtIndex:anIndex];
+	return array[anIndex];
 }
 
 //// //// //// //// //// //// //// //// //// //// //// ////// //// //// //// //// //// //// //// //// //// //// //
@@ -271,7 +271,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 
 - (id)objectAtIndex:(NSUInteger)anIndex {
 	
-	return [dictionary objectForKey:[array objectAtIndex:anIndex] ];
+	return dictionary[array[anIndex]];
 	
 }
 
@@ -279,7 +279,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 
 - (id)objectForKey:(id)aKey
 {
-	return [dictionary objectForKey:aKey];
+	return dictionary[aKey];
 }
 
 
@@ -333,7 +333,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 		[description appendFormat:@"%@    %@ = %@;\n",
 		 indentString,
 		 DescriptionForObject(key, locale, level),
-		 DescriptionForObject([self objectForKey:key], locale, level)];
+		 DescriptionForObject(self[key], locale, level)];
 	}
 	[description appendFormat:@"%@}\n", indentString];
 	return description;
@@ -353,7 +353,7 @@ NSString *DescriptionForObject(NSObject *object, id locale, NSUInteger indent)
 	NSMutableArray *duplicated = [array copy];
 	
 	// Insert on new position.
-	[array insertObject:[duplicated objectAtIndex:from] atIndex:( to > from ? to+1 : to )];
+	[array insertObject:duplicated[from] atIndex:( to > from ? to+1 : to )];
 
 	// Remove from the old position.
 	[array removeObjectAtIndex:( to < from ? from+1 : from ) ];

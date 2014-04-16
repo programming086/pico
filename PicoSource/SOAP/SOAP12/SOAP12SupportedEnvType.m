@@ -21,7 +21,7 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ATTRIBUTE xmlName:@"qname" propertyName:@"qname" type:PICO_TYPE_QNAME clazz:nil];
-    [map setObject:ps forKey:@"qname"];
+    map[@"qname"] = ps;
     
     return map;
 }

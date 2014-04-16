@@ -26,46 +26,46 @@ static NSMutableDictionary *cache = nil;
 	
 	// pre-initialize converters
 	converter = [[PicoStringConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_STRING];
+	cache[PICO_TYPE_STRING] = converter;
 	
 	converter = [[PicoNumberConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_INT];
+	cache[PICO_TYPE_INT] = converter;
 	
 	converter = [[PicoNumberConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_DOUBLE];
+	cache[PICO_TYPE_DOUBLE] = converter;
 	
 	converter = [[PicoNumberConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_SHORT];
+	cache[PICO_TYPE_SHORT] = converter;
 	
 	converter = [[PicoNumberConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_LONG];
+	cache[PICO_TYPE_LONG] = converter;
 	
 	converter = [[PicoNumberConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_FLOAT];
+	cache[PICO_TYPE_FLOAT] = converter;
 	
 	converter = [[PicoBoolConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_BOOL];
+	cache[PICO_TYPE_BOOL] = converter;
 	
 	converter = [[PicoStringConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_ENUM];
+	cache[PICO_TYPE_ENUM] = converter;
 	
 	converter = [[PicoDateConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_DATE];
+	cache[PICO_TYPE_DATE] = converter;
     
 	converter = [[PicoStringConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_DURATION];
+	cache[PICO_TYPE_DURATION] = converter;
 	
 	converter = [[PicoStringConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_CHAR];
+	cache[PICO_TYPE_CHAR] = converter;
     
     converter = [[PicoStringConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_QNAME];
+	cache[PICO_TYPE_QNAME] = converter;
 	
 	converter = [[PicoNumberConverter alloc] init];
-	[cache setObject: converter forKey: PICO_TYPE_BYTE];
+	cache[PICO_TYPE_BYTE] = converter;
     
     converter = [[PicoDataConverter alloc] init];
-    [cache setObject: converter forKey:PICO_TYPE_DATA];
+    cache[PICO_TYPE_DATA] = converter;
 }
 
 +(id)read: (NSString *)value withType: (NSString *)type config:(PicoConfig *)config {
@@ -90,7 +90,7 @@ static NSMutableDictionary *cache = nil;
 
 +(id <PicoConvertable>)lookup: (NSString *)type {
 	
-	id <PicoConvertable> converter = [cache objectForKey:type];
+	id <PicoConvertable> converter = cache[type];
 	return converter;
     
 }

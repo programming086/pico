@@ -29,15 +29,15 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Code" propertyName:@"code" type:PICO_TYPE_OBJECT clazz:[SOAP12Faultcode class]];
-    [map setObject:ps forKey:@"code"];
+    map[@"code"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Reason" propertyName:@"reason" type:PICO_TYPE_OBJECT clazz:[SOAP12Faultreason class]];
-    [map setObject:ps forKey:@"reason"];
+    map[@"reason"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Node" propertyName:@"node" type:PICO_TYPE_STRING clazz:nil];
-    [map setObject:ps forKey:@"node"];
+    map[@"node"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Role" propertyName:@"role" type:PICO_TYPE_STRING clazz:nil];
-    [map setObject:ps forKey:@"role"];
+    map[@"role"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Detail" propertyName:@"detail" type:PICO_TYPE_OBJECT clazz:[SOAP12Detail class]];
-    [map setObject:ps forKey:@"detail"];
+    map[@"detail"] = ps;
     
     return map;
 }

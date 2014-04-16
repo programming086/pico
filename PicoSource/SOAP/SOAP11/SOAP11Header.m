@@ -22,7 +22,7 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ANY_ELEMENT xmlName:@"any" propertyName:@"any" type:PICO_TYPE_ANYELEMENT clazz:nil];
-    [map setObject:ps forKey:@"any"];
+    map[@"any"] = ps;
     
     return map;
 }

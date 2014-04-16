@@ -85,13 +85,13 @@ static NSString *XSD_NAMESPACE = @"http://www.w3.org/2001/XMLSchema";
         SOAP11Envelope *soap11Envelope = obj;
         SOAP11Body *soap11Body = soap11Envelope.body;
         if (soap11Body && soap11Body.any.count > 0) {
-            innerObj = [soap11Body.any objectAtIndex:0];
+            innerObj = (soap11Body.any)[0];
         }
     } else { //soap 12
         SOAP12Envelope *soap12Envelope = obj;
         SOAP12Body *soap12Body = soap12Envelope.body;
         if (soap12Body && soap12Body.any.count > 0) {
-            innerObj = [soap12Body.any objectAtIndex:0];
+            innerObj = (soap12Body.any)[0];
         }
     }
     if (innerObj) {

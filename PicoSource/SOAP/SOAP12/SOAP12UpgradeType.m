@@ -23,7 +23,7 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT_ARRAY xmlName:@"SupportedEnvelope" propertyName:@"supportedEnvelope" type:PICO_TYPE_OBJECT clazz:[SOAP12SupportedEnvType class]];
-    [map setObject:ps forKey:@"supportedEnvelope"];
+    map[@"supportedEnvelope"] = ps;
     
     return map;
 }

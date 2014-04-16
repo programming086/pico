@@ -26,11 +26,11 @@
     
     PicoPropertySchema *ps = nil;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Header" propertyName:@"header" type:PICO_TYPE_OBJECT clazz:[SOAP11Header class]];
-    [map setObject:ps forKey:@"header"];
+    map[@"header"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ELEMENT xmlName:@"Body" propertyName:@"body" type:PICO_TYPE_OBJECT clazz:[SOAP11Body class]];
-    [map setObject:ps forKey:@"body"];
+    map[@"body"] = ps;
     ps = [[PicoPropertySchema alloc] initWithKind:PICO_KIND_ANY_ELEMENT xmlName:@"any" propertyName:@"any" type:PICO_TYPE_ANYELEMENT clazz:nil];
-    [map setObject:ps forKey:@"any"];
+    map[@"any"] = ps;
     
     return map;
 }
